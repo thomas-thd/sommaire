@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'Inscription</title>
+    <link rel="stylesheet" href="styles 1.css">
+</head>
+<!-- thomas thédié-->
+<body>
+    <div class="form-container">
+        <h1>Formulaire d'Inscription</h1>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td><label for="pseudo">Pseudo</label></td>
+                    <td><input type="text" id="pseudo" name="pseudo" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td><label for="prenom">Prénom</label></td>
+                    <td><input type="text" id="prenom" name="prenom" required></td>
+                </tr>
+                <tr>
+                    <td><label for="file">Avatar</label></td>
+                    <td><input type="file" id="file" name="file" required></td>
+                </tr>
+                <tr>
+                    <td><label for="pays">Pays</label></td>
+                    <td>
+                        <select name="pays" id="pays" required>
+                            <option value="">Sélectionnez un pays</option>
+                            <option value="Espagne">Espagne</option>
+                            <option value="France">France</option>
+                            <option value="Angleterre">Angleterre</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Choisissez votre fruit préféré</label></td>
+                    <td>
+                        <input type="checkbox" name="c1" value="pomme"> Orange
+                        <input type="checkbox" name="c1" value="poire"> Fraise
+                        <input type="checkbox" name="c1" value="peche"> Poire
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Civilité</label></td>
+                    <td>
+                        <input type="radio" name="genre" value="femme"> Femme
+                        <input type="radio" name="genre" value="homme"> Homme
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ville">Ville</label></td>
+                    <td><input type="text" id="ville" name="ville" required></td>
+                </tr>
+                <tr>
+                    <td><label for="code_postale">Code Postal</label></td>
+                    <td><input type="text" id="code_postale" name="code_postale" required></td>
+                </tr>
+                <tr>
+                    <td><label for="departement">Numéro de Département</label></td>
+                    <td><input type="text" id="departement" name="departement" required></td>
+                </tr>
+                <tr>
+                    <td><label for="message">Adresse</label></td>
+                    <td><textarea id="message" name="message" rows="2" required></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="naissance">Date de Naissance</label></td>
+                    <td><input type="date" id="naissance" name="naissance" required></td>
+                </tr>
+                <tr>
+                    <td><label for="tel">Téléphone</label></td>
+                    <td><input type="tel" name="tel" id="tel" required></td>
+                </tr>
+                <tr>
+                    <td><label for="recherche">Recherche</label></td>
+                    <td><input type="text" id="recherche" name="recherche" required></td>
+                </tr>
+                <tr>
+                    <td><label for="url">URL</label></td>
+                    <td><input type="text" id="url" name="url" required></td>
+                </tr>
+                <tr>
+                    <td><label for="jauge">Jauge</label></td>
+                    <td><input type="range" id="jauge" name="jauge" min="0" max="100"></td>
+                </tr>
+                <tr>
+                    <td><label for="couleur">Couleur</label></td>
+                    <td><input type="color" id="couleur" name="couleur" value="#000000"></td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="Envoyer">
+
+        </form>
+        <br>
+        <button><a href="mission 3.html">Retour</a></button>
+        
+    </div>
+</body>
+</html>

@@ -1,7 +1,6 @@
-/*thomas thédié*/
+/* thomas thédié */
 body {
     font-family: Arial, sans-serif;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,26 +13,23 @@ body {
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 600px;
-    
+    padding: 20px; /* Réduit le padding pour moins d'espace */
+    width: 400px; /* Réduit la largeur pour que tout soit visible */
 }
-
-
 
 h1 {
     text-align: center;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Réduit la marge pour économiser de l'espace */
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Réduit la marge entre les groupes de formulaire */
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 3px; /* Réduit la marge en bas des labels */
     font-weight: bold;
     color: #555;
 }
@@ -44,33 +40,31 @@ input[type="file"],
 input[type="tel"],
 input[type="date"],
 select,
-textarea { /* permet de former le formulaire */
-    width: 90%;
-    padding: 12px;
+textarea {
+    width: 95%; /* Ajuste la largeur pour un meilleur ajustement */
+    padding: 10px; /* Réduit le padding interne des champs de saisie */
     border: 1px solid #ccc;
     border-radius: 8px;
     transition: border-color 0.3s;
 }
 
-
-
 input[type="submit"],
-button { /* bouton pas survoler */
+button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 10px 15px; /* Réduit le padding pour des boutons plus petits */
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-input[type="submit"]:hover,/* bouton envoyer survoler */
+input[type="submit"]:hover,
 button:hover {
     background-color: #0056b3;
 }
 
-button a { /* bouton retour  */
+button a {
     color: white;
     text-decoration: none;
 }

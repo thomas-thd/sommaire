@@ -13,25 +13,23 @@ body {
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    padding: 20px; /* Réduit le padding pour moins d'espace */
-    width: 400px; /* Réduit la largeur pour que tout soit visible */
+    padding: 20px; /* Ajuster le padding pour une apparence plus compacte */
+    width: 400px; /* Largeur du conteneur */
 }
 
 h1 {
     text-align: center;
     color: #333;
-    margin-bottom: 15px; /* Réduit la marge pour économiser de l'espace */
+    margin-bottom: 15px; /* Réduire la marge inférieure pour rapprocher le titre du formulaire */
 }
 
-.form-group {
-    margin-bottom: 10px; /* Réduit la marge entre les groupes de formulaire */
+table {
+    width: 100%; /* Assurez-vous que le tableau prend toute la largeur */
 }
 
 label {
     display: block;
-    margin-bottom: 3px; /* Réduit la marge en bas des labels */
-    font-weight: bold;
-    color: #555;
+    margin-bottom: 5px;
 }
 
 input[type="text"],
@@ -41,8 +39,8 @@ input[type="tel"],
 input[type="date"],
 select,
 textarea {
-    width: 95%; /* Ajuste la largeur pour un meilleur ajustement */
-    padding: 10px; /* Réduit le padding interne des champs de saisie */
+    width: 95%; /* Largeur ajustée */
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
     transition: border-color 0.3s;
@@ -53,7 +51,7 @@ button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 15px; /* Réduit le padding pour des boutons plus petits */
+    padding: 10px 15px; /* Réduit le padding des boutons */
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;

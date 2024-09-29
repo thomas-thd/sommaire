@@ -45,7 +45,7 @@ input[type="tel"],
 input[type="date"],
 select,
 textarea { /* permet de former le formulaire */
-    width: 100%;
+    width: 90%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;

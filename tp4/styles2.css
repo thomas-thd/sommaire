@@ -1,0 +1,39 @@
+.block1{ 
+    background-color: aqua;
+float: left;
+height: 100px;
+width: 98%;
+margin: 10px;
+border-radius: 8px;
+text-align: center;}
+
+body{ 
+    background-color: blueviolet;
+    text-align: center;
+margin: 0%;}
+
+.block2{
+    margin:20px;  height: 400px; width: 400px;
+background-color: brown;
+float:left;
+border:5px solid blue;
+border-radius: 8px;}
+
+.block3{ 
+    background-color: aqua;
+float: left;
+height: 100px;
+width: 98%;
+margin: 10px;
+border-radius: 8px;
+text-align: center;
+clear: both;}
+.sousblock2{ height: 50px;
+width: 98%; background-color: aquamarine;
+float:inline-start;
+border-radius: 8px;
+margin: 5px;
+}
+#a{background-color: yellow;}
+#b{background-color: chartreuse;}
+#c{background-color: chocolate;}

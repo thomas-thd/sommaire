@@ -1,0 +1,41 @@
+/* Général */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #C0C0C0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Titre principal */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+/* Table */
+table {
+    margin: 0 auto;
+    border-spacing: 20px;
+}
+
+/* Liens */
+a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #555;
+}

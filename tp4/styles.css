@@ -1,0 +1,15 @@
+.block1{ background-color: aqua;
+float: left;
+height: 200px;
+width: 200px;
+margin: 10px;}
+body{ background-color: blueviolet;}
+
+.block2{margin: left 20px;  height: 200px; width: 150px;
+background-color: brown;
+float: right;}
+.block3{ margin-left: 20px;
+height: 180px;
+width: 150px;
+background-color: chocolate;
+clear: both;}

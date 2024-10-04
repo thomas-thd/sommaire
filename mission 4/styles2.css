@@ -1,0 +1,96 @@
+body{ font-size: 16px;
+background-color: antiquewhite;
+}
+.block1{ 
+    background-color: rgb(178, 201, 252);
+float: left;
+height: 200px;
+width: 25%;
+margin: 10px;
+border-radius: 8px;
+text-align: center;
+border: 5px solid #3388CC}
+#y{float: right;
+    width: 35%; border:5px solid #3388CC;}
+header{
+    margin: 10px;   width:98%;
+    background-color: brown;
+    
+    float: left;
+        height: 225px;
+        width: 98%;
+        margin: 5px;
+        border-radius: 8px;
+        text-align: center;
+        border: 2px solid brown;
+        margin-bottom: 70px;
+        border:5px solid#3388CC;
+}
+
+.Conteneur{ 
+    background-color: rgb(12, 111, 241);
+float: none;
+height: 1700px;
+width: 780px;
+margin: 5px;
+border-radius: 8px;
+text-align: center;
+border: 5px solid #3388CC;
+margin: auto;
+
+}
+h1{font-size: 20px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+
+.formation{
+    margin: 10px; 
+background-color: brown;
+
+float: left;
+    height: 225px;
+    width: 98%;
+    margin: 5px;
+    border-radius: 8px;
+    
+    border: 5px solid #3388CC;
+    margin-bottom: 70px;
+} #a{height: 425px;}
+#b{height: 325px;}
+#c{height: 325px;}
+.date{ 
+     background-color: rgb(143, 136, 241);
+    float: left;
+    height: 125px;
+    width: 28%;
+    margin: 5px;
+    border-radius: 8px;
+    text-align: center;
+    border: 5px solid #3388CC}
+
+    .info{  background-color: rgb(144, 81, 247);
+        float: right;
+        height: 125px;
+        width: 65%;
+        margin: 5px;
+        border-radius: 8px;
+        text-align: center;
+        border: 5px solid #3388CC}
+
+
+
+
+        @media (max-width: 768px) {
+            body{ background-color: black;}
+          
+            
+             
+               
+                
+        
+            .formation {
+                padding: 15px; width: 700px;
+            }
+        .Conteneur{height: 1830px;}
+        
+       
+        }

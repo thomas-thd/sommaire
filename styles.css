@@ -1,0 +1,83 @@
+
+    body {
+        margin: 0;
+     
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: linear-gradient(270deg, 
+            #003366, 
+            #00509E, 
+            #007FFF, 
+            #0099CC, 
+            #00CCFF, 
+            #66CCFF, 
+            #99CCFF, 
+            #B3E0FF, 
+            #C2E1FF);
+        background-size: 400% 400%;
+        animation: gradientAnimation 15s ease infinite;
+        overflow-y: auto;
+    }
+
+    @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+  .container {
+    text-align: center;
+    background-color: rgb(241, 58, 12);
+    height: 600px;
+    width: 300px;
+    margin: 5px;
+    border-radius: 8px;
+    text-align: center;
+    border: 5px solid #3388CC;
+    margin: auto; 
+    float:inline-start;
+    padding-top: 0%;
+  }
+  #a{  
+    margin-top: 12%;
+      
+    height: 300px;}
+    
+  h1 {
+    
+    color: white;
+    font-size: 2.5em;
+    margin-top: 0%;
+    margin: 0%;
+   
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .menu {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 15px 0;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    background-color: #3333cc;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu a:hover {
+    background-color: #1a1aff;
+  }
+  
+ 
+  

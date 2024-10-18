@@ -129,6 +129,7 @@ h1 {
   #a {
       height: 85%;
   }
+  .container {height:98%
 }
 
 @media (max-width: 480px) {

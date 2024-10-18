@@ -127,13 +127,13 @@ h1 {
 
 @media (max-width: 768px) {
   #a {
-      height: 85%;
+      height: 80%;
   }
   .container {height:98%
 }
 
 @media (max-width: 480px) {
   #a {
-      height: 85%;
+      height: 80%;
   }
 }

@@ -28,7 +28,7 @@ body {
 }
 
 #a {
-  height: 60%;
+  height: 65%;
 }
 
 h1 {
@@ -127,12 +127,12 @@ h1 {
 
 @media (max-width: 768px) {
   #a {
-      height: 80%;
+      height: 85%;
   }
 }
 
 @media (max-width: 480px) {
   #a {
-      height: 80%;
+      height: 85%;
   }
 }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Jules</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #login-section {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            width: 100%;
+            text-align: center;
+        }
+
+        #page-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .forgot-password {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="login-section">
+        <h1 id="page-title">Connexion à votre compte Jules</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Nom d'utilisateur" required><br>
+            <input type="password" id="password" placeholder="Mot de passe" required><br>
+            <button type="submit">Se connecter</button>
+        </form>
+        <a href="test3.html" class="forgot-password">J'ai oublié mon mot de passe</a>
+    </div>
+
+    <script>
+        // Fonction pour gérer la connexion
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Nom d'utilisateur et mot de passe fixes
+            const correctUsername = 'Jules.dupont';
+            const correctPassword = 'Jule$2024!Secure';  // Mot de passe fixe
+
+            // Vérification des informations de connexion
+            if (username === correctUsername && password === correctPassword) {
+                alert('Connexion réussie !');
+                // Redirection ou autre action après la connexion réussie
+                window.location.href = "page_suivante.html";  // Remplacer par l'URL de la page suivante après connexion
+            } else {
+                alert('Nom d\'utilisateur ou mot de passe incorrect.');
+            }
+        }
+
+        // Fonction d'initialisation qui va lier les événements
+        function init() {
+            const loginForm = document.getElementById('login-form');
+            loginForm.addEventListener('submit', handleLogin);
+        }
+
+        // Initialisation de la page une fois le DOM chargé
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+
+</body>
+</html>

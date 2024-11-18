@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>Réinitialisation du mot de passe</title>
+</head>
+<body>
+    <!-- Formulaire de réinitialisation de mot de passe -->
+    <div id="reset-section">
+        <h2>Réinitialisation du mot de passe</h2>
+        <form id="reset-form">
+            <label for="question">Question de sécurité :</label>
+            <select id="question" required>
+                <option value="1">Quel est le nom de ma ville ?</option>
+                <option value="2">Quel est le prénom de mon frère ?</option>
+                <option value="3">Quel est mon plat préféré ?</option>
+                <option value="4">Quel est le nom de mon lycée ?</option>
+            </select><br>
+            <input type="text" id="response-input" placeholder="Réponse" required><br>
+            <button type="submit">Réinitialiser le mot de passe</button>
+        </form>
+        <p id="response" class="message"></p>
+        <p id="password-display" class="message"></p>
+    </div>
+
+    <script src="test2.js"></script>
+</body>
+</html>

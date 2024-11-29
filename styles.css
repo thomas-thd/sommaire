@@ -126,6 +126,10 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .menu li {
+  margin: 1% 0;
+}
+
   #a {
       height: 80%;
   }

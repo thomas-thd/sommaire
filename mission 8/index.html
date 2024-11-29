@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mission 8</title>
+    <link rel="stylesheet" href="styles.css">
+  <script src="test.js"></script>
+    <!-- comme il me rester du temps j'ais changer l'icone du navigateur -->
+    <link rel="icon" href="img/bc39c321f49cdb88055e8728eae4452d.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+      
+    </header>
+    <!-- Conteneur pour centrer le contenu et que cela ne prennent pas toute la page -->
+     <!-- je vais commenter tous ceux code car ces demmander dans la mission 8 -->
+    <div class="centered-container">
+       
+        <h6>
+        mission 8  Thomas Thédié
+            </H6> 
+        <!-- Section pour convertir une température qui est l'exercice 1 js 
+         j'ai fait le même principe sur tous le htlm je ne vais pas mettre as chaque fois le commentaire -->
+        <div class="section">
+           
+            <p id="conversion"></p>
+            <h2>Convertir une température</h2>
+            <!-- Bouton pour convertir une température -->
+            <button onclick="convertirTemperature()">Convertir une température</button> 
+            
+            <!-- Bouton pour afficher le code JavaScript de la fonction même principe pour 
+             tous je ne vais commenter que celui la  -->
+            <button onclick="afficherCode()">Afficher le code</button>
+             <pre id="code1"></pre>
+        </div>
+
+        <!-- ajuster la taille du texte étonnament facile as faire -->
+        <div class="section">
+            <h2>Taille du texte ajustable</h2>
+            <p id="texte">Ceci est un texte ajustable.</p>
+            <!-- Boutons pour augmenter ou réduire la taille du texte -->
+            <button onclick="augmenterTaille()">Augmenter</button>
+            <button onclick="reduireTaille()">Réduire</button>
+            <button onclick="afficherCodeTaille()">Afficher le code</button>
+            <pre id="code2"></pre>
+        </div>
+
+        <div class="section">
+            <h2>Compter le nombre de clics</h2>
+            <p id="compteur">0</p>
+            <!-- Bouton pour incrémenter le compteur de clics -->
+            <button onclick="incrementer()">Cliquez ici</button>
+            <button onclick="afficherCodeAutre()">Afficher le code</button>
+            <pre id="code3"></pre>
+        </div>
+
+        <div class="section">
+            <h2>Saluer selon l'heure</h2>
+            <!-- Bouton pour afficher une salutation en fonction de l'heure -->
+            <button onclick="saluerSelonHeure()">Saluer selon l'heure</button>
+            <button onclick="afficherCodesaluer()" id="Saluer">Afficher le code</button>
+            <pre id="code4"></pre>
+        </div>
+
+        <!-- Section pour afficher l'heure actuelle -->
+        <div class="section">
+            <h2>Afficher l'heure actuelle</h2>
+            <!-- Bouton pour afficher l'heure actuelle -->
+            <button onclick=" afficheHeure()">Afficher l'heure</button>
+            <button onclick="afficherHeure2()">Afficher le code</button>
+            <pre id="code5"></pre>
+        </div>
+
+        <!-- Section pour convertir des devises -->
+        <div class="section">
+            <h2>Convertir devises</h2>
+            <!-- Bouton pour convertir en EUR -->
+            <button onclick="convertirDevises()">Convertir en EUR</button>
+            <!-- Bouton pour afficher le code de la fonction -->
+            <button onclick="afficherDevises()">Afficher le code</button>
+            <pre id="code6"></pre>
+        </div>
+
+        <!-- Section pour vérifier si un nombre est premier -->
+        <div class="section">
+            <h2>Vérifier un Nombre Premier</h2>
+            <!-- Champ de saisie pour entrer un nombre -->
+            <input type="number" id="inputValue" placeholder="Entrez un nombre" />
+            <!-- Bouton pour vérifier si le nombre est premier -->
+            <button onclick="verifierPremier()">Vérifier</button>
+            <!-- Bouton pour réinitialiser l'entrée -->
+            <button onclick="resetInput()">Réinitialiser</button>
+            <button onclick="afficherPremier()">Afficher le code</button>
+            <p id="message"></p>
+            <pre id="code7"></pre>
+        </div>
+
+        <!-- Section pour compter le nombre de voyelles dans un texte -->
+        <div class="section">
+            <h2>Compter les voyelles</h2>
+            <!-- Bouton pour compter les voyelles -->
+            <button onclick="compterVoyelles()">Compter les voyelles</button>
+            <button onclick="afficherVoyelles()">Afficher le code</button>
+            <pre id="code8"></pre>
+        </div>
+
+        <!-- Section pour changer la couleur de fond -->
+        <div>
+            <h2>Changer de couleur</h2>
+            <!-- Bouton pour changer la couleur de fond -->
+            <button onclick="test_couleur()">Changer la couleur de fond</button>
+            <button onclick="afficherCouleur()">Afficher le code</button>
+            <pre id="code9"></pre>
+        </div>
+
+        <!-- Section pour le jeu Pierre-Papier-Ciseaux -->
+        <div>
+            <h2>pierre / feuille/ ciseau</h2>
+            <button onclick="jouer('pierre')">Pierre</button>
+            <button onclick="jouer('feuille')">Feuille</button>
+            <button onclick="jouer('ciseaux')">Ciseaux</button>
+            <button onclick="afficherpierre()">Afficher le code</button>
+            <pre id="code10"></pre>
+        </div>
+
+        <!-- Section pour le jeu "Deviner le Nombre" -->
+        <div>
+            <h1>Jeu de Devine le Nombre</h1>
+            <p>Devinez le nombre secret entre 1 et 100</p>
+            <!-- Champ de saisie pour entrer un nombre -->
+            <input type="number" id="deviner" placeholder="Entrez un nombre entre 1 et 100">
+            <!-- Bouton pour deviner le nombre -->
+            <button onclick="devinerNombre()">Deviner</button>
+            <button onclick="afficherNombre()">Afficher le Code</button>
+            <pre id="code11"></pre>
+        </div>
+
+        <!-- Section pour le jeu des dés -->
+        <div>
+            <h1>Jeu du dé : Combien de fois le chiffre 6 apparaît ?</h1>
+            <label for="nombreDeLancers">Nombre de lancers :</label>
+            <!-- Champ de saisie pour entrer le nombre de lancers -->
+            <input type="number" id="nombreDeLancers" min="1" step="1" placeholder="Entrez un nombre">
+            <!-- Bouton pour lancer les dés -->
+            <button onclick="lancerDe()">Lancer les dés</button>
+            <p id="resultat"></p>
+            <button onclick="afficherDe()">Afficher le code</button>
+            <pre id="code12"></pre>
+        </div>
+    <div>
+        <h1>Obtenez l'heure de n'importe quelle ville</h1>
+    
+    <!-- Champ pour entrer le nom de la ville -->
+    <label for="ville">Entrez une ville :</label>
+    <input type="text" id="ville" placeholder="Ex: Paris, New York, Tokyo">
+    
+    <!-- Bouton pour afficher l'heure -->
+    <button onclick="afficherHeure13()">Afficher l'heure</button>
+    <button onclick="showCode13()">Afficher le code</button>
+    <!-- Zone d'affichage de l'heure -->
+    <p id="heure"></p>
+
+        <pre id="code13"></pre>
+    </div>
+    
+    <div>
+        <h2>Changer la couleur du texte</h2>
+
+        <!-- Paragraphe dont la couleur va changer -->
+        <p id="texte2">Ceci est un texte dont la couleur peut être changée.</p>
+    
+        <!-- Champ de texte pour entrer la couleur -->
+        <input type="text" id="couleurInput" placeholder="Entrez une couleur (ex: blue,red,brun,...)" />
+    
+        <!-- Bouton pour changer la couleur -->
+        <button onclick="changerCouleur()">Changer la couleur</button>
+        <button onclick="showCode14()">Afficher le code JavaScript</button>
+        <pre id="code14"></pre>
+    </div>
+    <div>
+        <h1>Générateur de Mot de Passe</h1>
+        <button onclick="genererMotDePasse()">Générer un mot de passe</button>
+        <p id="resultat3"></p> 
+    <button onclick="showCode15()">Afficher le code</button>
+    
+    <!-- Zone pour afficher le code -->
+    <pre id="code15"></pre>
+
+
+
+    </div>
+    <!-- petit probléme j'avais oublié un exercices donc 
+ ces la fonction show code 16 alors que il n'y a pas de 7 et pareil pour le pre -->
+    <h1>Générateur de Pseudo</h1>
+    <button onclick="generatePseudo()">Générer un Pseudo</button>
+    <p id="pseudo">Votre pseudo apparaîtra ici</p>
+    <button onclick="showCode16()">Afficher le code</button>
+    <pre id="code16"></pre>
+   </div>
+</div>
+</body>
+</html>

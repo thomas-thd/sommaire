@@ -127,7 +127,7 @@ h1 {
 
 @media (max-width: 768px) {
   .menu li {
-  margin: 1% 0;
+  margin: 2px 0;
 }
 
   #a {

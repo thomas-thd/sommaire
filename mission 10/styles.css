@@ -1,0 +1,90 @@
+/*thomas thédié/*
+/* Réinitialisation globale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* En-tête avec disposition */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border-bottom: 2px solid #555;
+}
+
+header .destinataire,
+header .compagnie {
+    max-width: 45%;
+    font-size: 14px;
+}
+
+header h3 {
+    margin-bottom: 5px;
+}
+
+/* Tableau de la facture */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid #555;
+    border-collapse: collapse;
+}
+
+thead th {
+    background: #555;
+    color: white;
+    padding: 10px;
+}
+
+tbody td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #555;
+}
+
+/* Boutons d'actions */
+.actions {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.actions button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    color: #fff;
+    background-color: #555;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.actions button:hover {
+    background-color: #777;
+}
+
+/* Section de résumé */
+.resume {
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+.resume p {
+    margin: 5px 0;
+}

@@ -3,86 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Couper un Réseau en Sous-Réseaux</title>
-     <link rel="stylesheet" href="styles.css">
+    <title>Découpage Réseau</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Diviser un Réseau en Sous-Réseaux</h1>
     
-    <label for="ip">Entrez une adresse IP avec son masque (ex: 192.168.1.0/24):</label>
+    <label for="ip">Entrez une adresse IP avec son masque (ex: 192.168.1.0/24) :</label>
     <input type="text" id="ip" placeholder="Ex: 192.168.1.0/24"><br><br>
 
-    <label for="sous_reseaux">En combien de sous-réseaux voulez-vous le diviser ? (Puissance de 2) :</label>
-    <input type="number" id="sous_reseaux" placeholder="Ex: 4"><br><br>
+    <button onclick="modeAutomatique()">Mode Automatique</button>
+    <button onclick="modePersonnalise()">Mode Personnalisé</button><br><br>
 
-    <button onclick="couperReseau()">Diviser le réseau</button>
+    <div id="automatiqueDiv" style="display:none;">
+        <label for="nb_sous_reseaux_auto">Nombre de sous-réseaux :</label>
+        <input type="number" id="nb_sous_reseaux_auto" placeholder="Ex: 4">
+        <button onclick="calculerAuto()">Diviser</button>
+    </div>
+
+    <div id="personnaliseDiv" style="display:none;">
+        <label for="nb_sous_reseaux">Combien de sous-réseaux ? :</label>
+        <input type="number" id="nb_sous_reseaux" placeholder="Ex: 3">
+        <button onclick="genererChamps()">Suivant</button>
+    </div>
+
+    <div id="machinesDiv" style="display:none;">
+        <h3>Nombre de machines par sous-réseau :</h3>
+        <div id="champsMachines"></div>
+        <button onclick="calculerPerso()">Diviser</button>
+    </div>
 
     <h2>Résultat :</h2>
     <pre id="resultat"></pre>
 
     <script>
-        function couperReseau() {
-            const ipBase = document.getElementById("ip").value;
-            const nombreSousReseaux = parseInt(document.getElementById("sous_reseaux").value);
+        function modeAutomatique() {
+            document.getElementById("automatiqueDiv").style.display = "block";
+            document.getElementById("personnaliseDiv").style.display = "none";
+            document.getElementById("machinesDiv").style.display = "none";
+        }
 
-            // Vérifier que l'adresse IP et le nombre de sous-réseaux sont valides
-            const regex = /^(\d{1,3}\.){3}\d{1,3}\/\d{1,2}$/;
-            if (!regex.test(ipBase)) {
+        function modePersonnalise() {
+            document.getElementById("personnaliseDiv").style.display = "block";
+            document.getElementById("automatiqueDiv").style.display = "none";
+            document.getElementById("machinesDiv").style.display = "none";
+        }
+
+        function genererChamps() {
+            const nbSousReseaux = parseInt(document.getElementById("nb_sous_reseaux").value);
+            const champsDiv = document.getElementById("champsMachines");
+            champsDiv.innerHTML = "";
+
+            for (let i = 0; i < nbSousReseaux; i++) {
+                champsDiv.innerHTML += `<label>Sous-réseau ${i + 1} :</label> 
+                                        <input type="number" id="machines_${i}" placeholder="Ex: 50"><br>`;
+            }
+
+            document.getElementById("machinesDiv").style.display = "block";
+        }
+
+        function calculerAuto() {
+            const ipBase = document.getElementById("ip").value;
+            const nbSousReseaux = parseInt(document.getElementById("nb_sous_reseaux_auto").value);
+
+            if (!validerIP(ipBase)) {
                 document.getElementById("resultat").innerText = "Adresse IP ou masque invalide.";
                 return;
             }
 
-            if (nombreSousReseaux & (nombreSousReseaux - 1)) {
-                document.getElementById("resultat").innerText = "Le nombre de sous-réseaux doit être une puissance de 2 (ex: 2, 4, 8, 16...).";
-                return;
-            }
-
-            // Extraire l'IP et le masque
             const [ip, prefix] = ipBase.split('/');
             const initialPrefix = parseInt(prefix);
-            const nouveauPrefix = initialPrefix + Math.log2(nombreSousReseaux);
+            let startIp = ipToLong(ip);
+            let nouveauPrefix = initialPrefix + Math.ceil(Math.log2(nbSousReseaux));
 
             if (nouveauPrefix > 30) {
-                document.getElementById("resultat").innerText = "Impossible de diviser davantage, les sous-réseaux seraient trop petits.";
+                document.getElementById("resultat").innerText = "Impossible de diviser ce réseau.";
                 return;
             }
 
-            // Calcul du nombre de machines utilisables par sous-réseau
-            const h = 32 - nouveauPrefix;  // Nombre de bits pour les hôtes
-            const nombreMachines = h > 1 ? Math.pow(2, h) - 2 : 0; // 2^h - 2 (on retire l'adresse réseau et broadcast)
+            let resultat = `Le réseau ${ip}/${initialPrefix} est divisé en ${nbSousReseaux} sous-réseaux :\n`;
 
-            // Diviser le réseau en sous-réseaux
-            let resultat = `Le réseau ${ipBase} est divisé en ${nombreSousReseaux} sous-réseaux :\n`;
-
-            const startIp = ipToLong(ip);
-            for (let i = 0; i < nombreSousReseaux; i++) {
-                const baseSousReseau = longToIp(startIp + i * Math.pow(2, 32 - nouveauPrefix));
-                const broadcast = longToIp(startIp + (i + 1) * Math.pow(2, 32 - nouveauPrefix) - 1);
+            for (let i = 0; i < nbSousReseaux; i++) {
+                const baseSousReseau = longToIp(startIp);
+                const broadcast = longToIp(startIp + Math.pow(2, 32 - nouveauPrefix) - 1);
 
                 resultat += `  - Sous-réseau ${i + 1}: ${baseSousReseau}/${nouveauPrefix}\n`;
-                resultat += `      ➤ Première adresse machine : ${longToIp(startIp + i * Math.pow(2, 32 - nouveauPrefix) + 1)}\n`;
-                resultat += `      ➤ Dernière adresse machine : ${longToIp(startIp + (i + 1) * Math.pow(2, 32 - nouveauPrefix) - 2)}\n`;
-                resultat += `      ➤ Adresse de broadcast : ${broadcast}\n`;
-                resultat += `      ➤ Nombre de machines utilisables : ${nombreMachines}\n\n`;
+                resultat += `      ➤ Première adresse machine : ${longToIp(startIp + 1)}\n`;
+                resultat += `      ➤ Dernière adresse machine : ${longToIp(ipToLong(broadcast) - 1)}\n`;
+                resultat += `      ➤ Adresse de broadcast : ${broadcast}\n\n`;
+
+                startIp += Math.pow(2, 32 - nouveauPrefix);
             }
 
             document.getElementById("resultat").innerText = resultat.trim();
         }
 
-        // Fonction pour convertir une adresse IP en nombre
-        function ipToLong(ip) {
-            const parts = ip.split('.').map(Number);
-            return (parts[0] << 24) + (parts[1] << 16) + (parts[2] << 8) + parts[3];
+        function calculerPerso() {
+            const ipBase = document.getElementById("ip").value;
+            const nbSousReseaux = parseInt(document.getElementById("nb_sous_reseaux").value);
+
+            if (!validerIP(ipBase)) {
+                document.getElementById("resultat").innerText = "Adresse IP ou masque invalide.";
+                return;
+            }
+
+            const [ip, prefix] = ipBase.split('/');
+            const initialPrefix = parseInt(prefix);
+            let startIp = ipToLong(ip);
+            let resultat = `Le réseau ${ip}/${initialPrefix} est divisé en ${nbSousReseaux} sous-réseaux :\n`;
+
+            for (let i = 0; i < nbSousReseaux; i++) {
+                let machines = parseInt(document.getElementById(`machines_${i}`).value);
+                const h = Math.ceil(Math.log2(machines + 2)); 
+                const nouveauPrefix = 32 - h;
+
+                if (nouveauPrefix < initialPrefix) {
+                    document.getElementById("resultat").innerText = "Trop de machines pour ce réseau.";
+                    return;
+                }
+
+                const baseSousReseau = longToIp(startIp);
+                const broadcast = longToIp(startIp + Math.pow(2, 32 - nouveauPrefix) - 1);
+
+                resultat += `  - Sous-réseau ${i + 1}: ${baseSousReseau}/${nouveauPrefix}\n`;
+                resultat += `      ➤ Première adresse machine : ${longToIp(startIp + 1)}\n`;
+                resultat += `      ➤ Dernière adresse machine : ${longToIp(ipToLong(broadcast) - 1)}\n`;
+                resultat += `      ➤ Adresse de broadcast : ${broadcast}\n\n`;
+
+                startIp += Math.pow(2, 32 - nouveauPrefix);
+            }
+
+            document.getElementById("resultat").innerText = resultat.trim();
         }
 
-        // Fonction pour convertir un nombre en adresse IP
+        function validerIP(ipBase) {
+            return /^(\d{1,3}\.){3}\d{1,3}\/\d{1,2}$/.test(ipBase);
+        }
+
+        function ipToLong(ip) {
+            return ip.split('.').map(Number).reduce((acc, part) => (acc << 8) + part);
+        }
+
         function longToIp(long) {
-            return [
-                (long >>> 24) & 255,
-                (long >>> 16) & 255,
-                (long >>> 8) & 255,
-                long & 255
-            ].join('.');
+            return [(long >>> 24) & 255, (long >>> 16) & 255, (long >>> 8) & 255, long & 255].join('.');
         }
     </script>
 </body>

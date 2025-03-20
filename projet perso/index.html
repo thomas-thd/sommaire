@@ -4,65 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>L’Évolution des Algorithmes de Chiffrement et des Politiques de Mots de Passe</title>
-  <style>
-    /* Base Styles */
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f9f9f9;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-    }
-    header, footer {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    h1, h2, h3 {
-      color: #222;
-      margin-top: 0;
-    }
-    p {
-      margin: 0 0 1em;
-    }
-    /* Timeline Styles */
-    .timeline-section {
-      margin-bottom: 40px;
-    }
-    .timeline {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .timeline li {
-      border-left: 2px solid #007BFF;
-      padding-left: 20px;
-      margin-bottom: 20px;
-      position: relative;
-    }
-    .timeline li::before {
-      content: "";
-      position: absolute;
-      left: -6px;
-      top: 0;
-      width: 10px;
-      height: 10px;
-      background-color: #007BFF;
-      border-radius: 50%;
-    }
-    /* Responsive */
-    @media (max-width: 600px) {
-      .container {
-        padding: 10px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
@@ -131,18 +73,46 @@
         <h2>L’Évolution à Travers le Temps</h2>
         <p>Au début du millénaire, les systèmes reposaient sur des algorithmes de hachage classiques comme MD5 et SHA-1, combinés à des politiques de mots de passe minimalistes (6 à 8 caractères). Rapidement, la communauté scientifique a révélé leurs failles via des collisions et des attaques par force brute ou dictionnaire.</p>
         <p>Les incidents majeurs, tels que la fuite de <em>LinkedIn</em> en 2012 et le drame de <em>RockYou</em> en 2009, ont servi de révélateurs, poussant à adopter des solutions plus robustes. L’apparition de <em>bcrypt</em> en 2008, suivi par <em>scrypt</em> en 2013 et <em>Argon2</em> en 2015, illustre la transition vers des algorithmes adaptatifs qui ralentissent le processus de hachage et augmentent considérablement le coût des attaques par force brute.</p>
-        <p>Simultanément, les politiques de mots de passe se sont complexifiées, passant d’exigences strictes sur la complexité à la recommandation d’utiliser des passphrases longues, soutenues par des directives comme celles du NIST. Le renforcement du cadre légal en 2018 avec la loi n° 2018-133 confirme l’engagement du législateur à protéger les données sensibles.</p>
+        <p>Simultanément, les politiques de mots de passe se sont complexifiées, passant d’exigences strictes sur la complexité à la recommandation d’utiliser des passphrases longues, soutenues par des directives telles que celles émises par le NIST. Le renforcement du cadre légal en 2018 avec la loi n° 2018-133 confirme l’engagement du législateur à protéger les données sensibles.</p>
       </section>
       
       <section>
         <h2>Conclusion</h2>
-        <p>L’histoire des algorithmes de chiffrement et des politiques de mots de passe témoigne d’une adaptation constante face aux menaces numériques. De MD5 et SHA-1 aux solutions avancées telles que <em>bcrypt</em>, <em>scrypt</em> et <em>Argon2</em>, chaque innovation a marqué une avancée vers une sécurité renforcée. Des incidents comme RockYou et LinkedIn ont catalysé ces évolutions, illustrant l’impératif de repenser continuellement les pratiques de sécurité pour protéger efficacement nos données dans un monde de plus en plus connecté.</p>
+        <p>L’histoire des algorithmes de chiffrement et des politiques de mots de passe témoigne d’une adaptation constante face aux menaces numériques. De MD5 et SHA-1 aux solutions avancées telles que <em>bcrypt</em>, <em>scrypt</em> et <em>Argon2</em>, chaque innovation a marqué une avancée vers une sécurité renforcée. Des incidents comme <em>RockYou</em> et <em>LinkedIn</em> ont catalysé ces évolutions, illustrant l’impératif de repenser continuellement les pratiques de sécurité pour protéger efficacement nos données dans un monde de plus en plus connecté.</p>
       </section>
     </article>
     
-    <footer>
-      <p>&copy; 2025 CyberSécurité &amp; Informatique</p>
-    </footer>
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li>
+          <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000036644772" target="_blank">
+            Loi n° 2018-133 du 26 février 2018 – Legifrance
+          </a>
+        </li>
+        <li>
+          <a href="https://www.lemonde.fr" target="_blank">
+            Le Monde
+          </a>
+        </li>
+        <li>
+          <a href="https://www.nist.gov" target="_blank">
+            NIST – National Institute of Standards and Technology
+          </a>
+        </li>
+        <li>
+          <a href="https://www.ssi.gouv.fr/" target="_blank">
+            ANSSI – Agence nationale de la sécurité des systèmes d'information
+          </a>
+        </li>
+        <li>
+          <a href="https://www.cnil.fr/" target="_blank">
+            CNIL – Commission nationale de l'informatique et des libertés
+          </a>
+        </li>
+      </ul>
+    </section>
+    
   </div>
 </body>
 </html>

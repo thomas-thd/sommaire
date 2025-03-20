@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L’Évolution des Algorithmes de Chiffrement et des Politiques de Mots de Passe</title>
+  <style>
+    /* Base Styles */
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+    }
+    header, footer {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h1, h2, h3 {
+      color: #222;
+      margin-top: 0;
+    }
+    p {
+      margin: 0 0 1em;
+    }
+    /* Timeline Styles */
+    .timeline-section {
+      margin-bottom: 40px;
+    }
+    .timeline {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .timeline li {
+      border-left: 2px solid #007BFF;
+      padding-left: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      background-color: #007BFF;
+      border-radius: 50%;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>L’Évolution des Algorithmes de Chiffrement et des Politiques de Mots de Passe</h1>
+      <p>Du besoin fondamental de confidentialité aux exigences modernes</p>
+    </header>
+    
+    <section class="timeline-section">
+      <h2>Frise Chronologique 2000 – 2025</h2>
+      <ul class="timeline">
+        <li>
+          <strong>2000</strong>
+          <p>Face à la montée de l’informatisation, les systèmes adoptent massivement des fonctions de hachage classiques (MD5, SHA-1) pour protéger les mots de passe – des solutions simples reposant sur une complexité minimale.</p>
+        </li>
+        <li>
+          <strong>2004 – 2005</strong>
+          <p>Des chercheurs démontrent les failles de MD5 et SHA-1 par la mise en évidence de collisions. L’ajout de « salt » est alors préconisé pour diversifier les hachages.</p>
+        </li>
+        <li>
+          <strong>2006</strong>
+          <p>Les attaques par force brute et dictionnaire exposent les limites des méthodes classiques, signalant l’urgence d’évoluer vers des solutions plus robustes.</p>
+        </li>
+        <li>
+          <strong>2008</strong>
+          <p>L’algorithme <em>bcrypt</em> fait son entrée, avec son paramètre de coût ajustable qui ralentit le processus de hachage et renforce la sécurité.</p>
+        </li>
+        <li>
+          <strong>2009</strong>
+          <p>Le drame de <em>RockYou</em> expose environ 32 millions de mots de passe, souvent stockés en clair ou avec des techniques inadéquates, soulignant l’importance cruciale d’un chiffrement solide.</p>
+        </li>
+        <li>
+          <strong>2012</strong>
+          <p>La fuite de données de <em>LinkedIn</em>, où les mots de passe étaient hachés en SHA-1 sans salage, met en lumière les dangers des méthodes obsolètes.</p>
+        </li>
+        <li>
+          <strong>2013</strong>
+          <p>L’algorithme <em>scrypt</em> gagne en notoriété en mobilisant à la fois le temps de calcul et la mémoire, rendant les attaques via matériels spécialisés bien plus complexes.</p>
+        </li>
+        <li>
+          <strong>2015</strong>
+          <p><em>Argon2</em>, lauréat du Password Hashing Competition, incarne la nouvelle génération d’algorithmes avec des paramètres ajustables pour une sécurité optimale.</p>
+        </li>
+        <li>
+          <strong>2017</strong>
+          <p>Les recommandations du NIST préconisent l’utilisation de passphrases longues (12 à 16 caractères ou plus) plutôt que des règles strictes sur les caractères spéciaux.</p>
+        </li>
+        <li>
+          <strong>2018</strong>
+          <p>La loi n° 2018-133 du 26 février 2018 en France renforce le cadre légal, imposant des mesures accrues pour la protection des données sensibles.</p>
+        </li>
+        <li>
+          <strong>2020 – 2025</strong>
+          <p>La généralisation de l’authentification multi-facteurs (MFA/2FA) et la recherche vers des solutions post-quantiques et biométriques anticipent les menaces futures.</p>
+        </li>
+      </ul>
+    </section>
+    
+    <article>
+      <section>
+        <h2>Pourquoi a-t-on créé les algorithmes de chiffrement ?</h2>
+        <p>Depuis des millénaires, la protection des communications a toujours été cruciale, que ce soit pour préserver des secrets militaires ou sécuriser des échanges commerciaux. À l’aube de l’ère numérique, la nécessité de garantir la confidentialité et l’intégrité des données s’est intensifiée. Les premières méthodes de chiffrement et de hachage ont ainsi vu le jour pour protéger les transactions financières, les données personnelles et les échanges stratégiques, répondant à un besoin fondamental de sécurité.</p>
+      </section>
+      
+      <section>
+        <h2>L’Évolution à Travers le Temps</h2>
+        <p>Au début du millénaire, les systèmes reposaient sur des algorithmes de hachage classiques comme MD5 et SHA-1, combinés à des politiques de mots de passe minimalistes (6 à 8 caractères). Rapidement, la communauté scientifique a révélé leurs failles via des collisions et des attaques par force brute ou dictionnaire.</p>
+        <p>Les incidents majeurs, tels que la fuite de <em>LinkedIn</em> en 2012 et le drame de <em>RockYou</em> en 2009, ont servi de révélateurs, poussant à adopter des solutions plus robustes. L’apparition de <em>bcrypt</em> en 2008, suivi par <em>scrypt</em> en 2013 et <em>Argon2</em> en 2015, illustre la transition vers des algorithmes adaptatifs qui ralentissent le processus de hachage et augmentent considérablement le coût des attaques par force brute.</p>
+        <p>Simultanément, les politiques de mots de passe se sont complexifiées, passant d’exigences strictes sur la complexité à la recommandation d’utiliser des passphrases longues, soutenues par des directives comme celles du NIST. Le renforcement du cadre légal en 2018 avec la loi n° 2018-133 confirme l’engagement du législateur à protéger les données sensibles.</p>
+      </section>
+      
+      <section>
+        <h2>Conclusion</h2>
+        <p>L’histoire des algorithmes de chiffrement et des politiques de mots de passe témoigne d’une adaptation constante face aux menaces numériques. De MD5 et SHA-1 aux solutions avancées telles que <em>bcrypt</em>, <em>scrypt</em> et <em>Argon2</em>, chaque innovation a marqué une avancée vers une sécurité renforcée. Des incidents comme RockYou et LinkedIn ont catalysé ces évolutions, illustrant l’impératif de repenser continuellement les pratiques de sécurité pour protéger efficacement nos données dans un monde de plus en plus connecté.</p>
+      </section>
+    </article>
+    
+    <footer>
+      <p>&copy; 2025 CyberSécurité &amp; Informatique</p>
+    </footer>
+  </div>
+</body>
+</html>

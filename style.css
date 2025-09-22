@@ -1,20 +1,95 @@
+/* Reset basique */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Corps */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-}
-
-.container {
-    width: 50%;
-    margin: 100px auto;
+    background-color: #0e0e0e;
+    color: #fff;
     padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-input, select, button {
-    margin: 10px;
-    padding: 10px;
-    width: 80%;
+/* Titres */
+h1, h2, h3 {
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+/* Labels et inputs */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+/* Boutons */
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1c7c32;
+}
+
+/* Divs des modes */
+#automatiqueDiv,
+#personnaliseDiv,
+#machinesDiv {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+}
+
+/* Résultat */
+pre#resultat {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #222;
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-size: 0.95em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    input[type="text"], input[type="number"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
 }

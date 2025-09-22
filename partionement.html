@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partitionnement Linux - Thomas Thédié</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background: #2c3e50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+    main {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+    }
+    h2 {
+        color: #2c3e50;
+    }
+    pre {
+        background: #272822;
+        color: #f8f8f2;
+        padding: 12px;
+        border-radius: 6px;
+        overflow-x: auto;
+    }
+    .box {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    th, td {
+        border: 1px solid #999;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background: #2c3e50;
+        color: white;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Partitionnement Linux</h1>
+    <p>Disques, partitions et systèmes de fichiers</p>
+</header>
+
+<main>
+
+<div class="box">
+    <h2>1. Définition</h2>
+    <p>Le partitionnement consiste à diviser un disque physique en plusieurs parties logiques appelées partitions. Chaque partition peut contenir un système de fichiers différent.</p>
+</div>
+
+<div class="box">
+    <h2>2. Types de partitions</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Primaire</td><td>Partition principale pouvant contenir un système de fichiers bootable. Max 4 par disque MBR.</td></tr>
+            <tr><td>Étendue</td><td>Partition spéciale permettant de créer des partitions logiques à l’intérieur. Sert à dépasser 4 partitions.</td></tr>
+            <tr><td>Logique</td><td>Partitions créées à l’intérieur d’une partition étendue. Utilisées pour les systèmes et données.</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="box">
+    <h2>3. Systèmes de fichiers courants</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Système de fichiers</th>
+                <th>Utilisation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>ext4</td><td>Système principal pour Linux</td></tr>
+            <tr><td>swap</td><td>Zone d’échange mémoire virtuelle</td></tr>
+            <tr><td>vfat / FAT32</td><td>Compatibilité Windows/USB</td></tr>
+            <tr><td>ntfs</td><td>Disques partagés avec Windows</td></tr>
+            <tr><td>xfs</td><td>Grandes partitions et serveurs</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="box">
+    <h2>4. Commandes utiles</h2>
+    <pre>
+# Lister les disques et partitions
+lsblk
+fdisk -l
+parted -l
+
+# Créer une partition (fdisk pour MBR, parted pour GPT)
+sudo fdisk /dev/sda
+
+# Formater une partition
+sudo mkfs.ext4 /dev/sda1       # ext4
+sudo mkswap /dev/sda2          # swap
+
+# Activer la swap
+sudo swapon /dev/sda2
+
+# Monter une partition
+sudo mount /dev/sda1 /mnt
+
+# Vérifier les systèmes de fichiers
+df -h
+lsblk -f
+    </pre>
+</div>
+
+<div class="box">
+    <h2>5. Exemple pratique</h2>
+    <pre>
+Disque /dev/sda de 100 Go :
+
+1. /dev/sda1 → 20 Go → ext4 → système Linux
+2. /dev/sda2 → 4 Go → swap → mémoire virtuelle
+3. /dev/sda3 → 76 Go → ext4 → données utilisateur
+
+Commandes :
+sudo fdisk /dev/sda
+sudo mkfs.ext4 /dev/sda1
+sudo mkswap /dev/sda2
+sudo mkfs.ext4 /dev/sda3
+sudo swapon /dev/sda2
+sudo mount /dev/sda3 /mnt/data
+    </pre>
+</div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Professionnel – Thomas THÉDIÉ – BTS SIO SISR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Ajout de quelques styles rapides pour la structure si ton CSS est manquant */
+        :root { --main-blue: #1e3a8a; --light-blue: #3b82f6; --bg: #f8fafc; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; color: #334155; }
+        .navbar { position: sticky; top: 0; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; padding: 10px 0; }
+        .navbar ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 0; }
+        .navbar a { text-decoration: none; color: var(--main-blue); font-weight: 600; padding: 10px 20px; transition: 0.3s; }
+        .navbar a:hover { color: var(--light-blue); }
+        .profile-img { width: 8%; border-radius: 1%; border: 5px solid #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        header { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, var(--main-blue), var(--light-blue)); color: white; }
+        section { max-width: 1100px; margin: 40px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card { border: 1px solid #e2e8f0; padding: 25px; border-radius: 10px; margin-bottom: 25px; transition: 0.3s; border-left: 5px solid var(--light-blue); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .footer-info a { color: white; text-decoration: none; margin: 0 15px; font-size: 1.1rem; }
+        footer { background: var(--main-blue); color: white; text-align: center; padding: 50px 20px; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="#experiences">Parcours</a></li>
+        <li><a href="#situations">Situations & Compétences</a></li>
+        <li><a href="#certificats">Certifications</a></li>
+        <li><a href="veille.html">Veille Technologique</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header>
+    <div class="profile">
+        <img src="IMG_2398.jpg" alt="Thomas Thédié" class="profile-img">
+        <h1>Thomas Thédié</h1>
+        <p style="font-size: 1.4rem; font-weight: 300;">BTS SIO Option SISR – Solutions d'infrastructure, systèmes et réseaux</p>
+    </div>
+</header>
+
+<main>
+
+    <section id="experiences">
+        <h2><i class="fas fa-history"></i> Expériences Professionnelles</h2>
+        
+        <div class="card">
+            <h3 style="margin-top:0;">Technicien Systèmes & Réseaux – Entreprise INTM (2024 - 2025)</h3>
+            <ul style="line-height: 1.8;">
+                <li><strong>Gestion du parc informatique :</strong> Inventaire complet et suivi rigoureux des actifs matériels.</li>
+                <li><strong>Migration Système :</strong> Pilotage du passage de Windows 10 vers Windows 11 (postes de formation et consultants).</li>
+                <li><strong>Support Utilisateurs :</strong> Installation de logiciels métiers, déploiement de pilotes et résolution d'incidents (N1/N2).</li>
+                <li><strong>Gestion Identités :</strong> Création, modification et maintenance des comptes utilisateurs au sein de l'infrastructure.</li>
+                <li><strong>Infrastructure Réseau :</strong> Installation et brassage de switches, paramétrage de bornes GSM 4G pour la connectivité distante.</li>
+                <li><strong>Maintenance :</strong> Entretien préventif et curatif des postes de travail et équipements réseaux.</li>
+            </ul>
+        </div>
+
+        <div class="card" style="border-left-color: #10b981;">
+            <h3 style="margin-top:0;">Administrateur réseau junior – Entreprise TDF (2024)</h3>
+            <ul style="line-height: 1.8;">
+                <li><strong>Veille Technologique :</strong> Étude approfondie sur les nouveaux équipements réseaux et l'intégration de l'IA dans l'administration.</li>
+                <li><strong>Déploiement Matériel :</strong> Installation physique et configuration logique d'équipements réseaux critiques.</li>
+                <li><strong>Automatisation :</strong> Développement de scripts Python pour l'automatisation de tâches d'administration récurrentes.</li>
+                <li><strong>Data Processing :</strong> Utilisation de Regex (Expressions régulières) pour le traitement, le filtrage et l'analyse de flux de données.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="situations">
+        <h2><i class="fas fa-tasks"></i> Situations Professionnelles & Compétences</h2>
+
+        <div class="card">
+            <h3>Recensement et suivi du parc informatique</h3>
+            <p><strong>Contexte :</strong> Parc Windows 10 dédié aux utilisateurs INTM et aux sessions de formation.</p>
+            <p><strong>Problème / Besoin :</strong> Nécessité d'un suivi précis pour la planification des cycles de mise à jour et des migrations matérielles.</p>
+            <p><strong>Mon action :</strong> Réalisation d'un inventaire via <strong>Intune</strong> couplé à un recensement manuel sur site pour identifier chaque utilisateur et équipement.</p>
+            <p><strong>Résultat :</strong> Constitution d'une base de données fiable permettant une gestion proactive et une planification sans interruption de service.</p>
+            <p><em>Compétences : Gestion de parc, Intune, Inventaire matériel.</em></p>
+        </div>
+
+        <div class="card">
+            <h3>Migration massive Windows 10 vers Windows 11</h3>
+            <p><strong>Contexte :</strong> Postes critiques pour consultants et salles de formation.</p>
+            <p><strong>Problème / Besoin :</strong> Obsolescence logicielle et impératifs de sécurité exigeant le passage à Windows 11.</p>
+            <p><strong>Mon action :</strong> Audit de compatibilité matérielle, gestion du calendrier de déploiement, migration sur site/distance et résolution des blocages SSD via mise à jour des drivers BIOS.</p>
+            <p><strong>Résultat :</strong> 100% du parc compatible migré avec succès, suppression des vulnérabilités liées aux anciens OS.</p>
+        </div>
+
+        <div class="card">
+            <h3>Réseau et infrastructure physique</h3>
+            <p><strong>Contexte :</strong> Cœur de réseau et baie informatique de l'entreprise.</p>
+            <p><strong>Problème / Besoin :</strong> Optimisation de la connectivité et renforcement de la sécurité physique et logique.</p>
+            <p><strong>Mon action :</strong> Opérations de brassage en baie, configuration de switches, déploiement de bornes GSM 4G de secours et tests de connectivité end-to-end.</p>
+            <p><strong>Résultat :</strong> Infrastructure stabilisée, redondance accrue et sécurisation des flux réseaux.</p>
+        </div>
+
+        <div class="card">
+            <h3>Automatisation et scripts Python</h3>
+            <p><strong>Contexte :</strong> Analyse de données de parc et gestion de logs.</p>
+            <p><strong>Problème / Besoin :</strong> Tâches d'extraction de données répétitives et chronophages pour l'équipe technique.</p>
+            <p><strong>Mon action :</strong> Conception et déploiement de scripts <strong>Python</strong> sur mesure pour l'automatisation des rapports d'inventaire.</p>
+            <p><strong>Résultat :</strong> Réduction significative du temps de traitement et fiabilisation des données extraites.</p>
+        </div>
+
+        <div class="card">
+            <h3>Benchmark et optimisation d'équipements</h3>
+            <p><strong>Contexte :</strong> Comparaison de performances serveurs et postes clients.</p>
+            <p><strong>Problème / Besoin :</strong> Identifier le matériel optimal pour des applications métiers gourmandes en ressources.</p>
+            <p><strong>Mon action :</strong> Protocoles de tests (benchmarks), analyse comparative des composants et rédaction de préconisations d'achat.</p>
+            <p><strong>Résultat :</strong> Optimisation du budget IT et amélioration des performances utilisateurs.</p>
+        </div>
+    </section>
+
+    <section id="certificats">
+        <h2><i class="fas fa-file-contract"></i> Diplômes & Certifications de Veille</h2>
+        <div class="cert-grid">
+            <div class="card">
+                <h4>Pôle Protection des données (RGPD)</h4>
+                <ul>
+                    <li><a href="doc/Certificat_1.pdf" target="_blank">Certificat RGPD - Niveau Expert</a></li>
+                    <li><a href="doc/Attestation_de_suivi 2.pdf" target="_blank">Attestation Protection des données</a></li>
+                    <li><a href="doc/Certificat_4.pdf" target="_blank">Certificat DPO (Data Protection Officer)</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Gouvernance & Responsabilité</h4>
+                <ul>
+                    <li><a href="doc/Certificat_3.pdf" target="_blank">Responsabilité des acteurs du numérique</a></li>
+                    <li><a href="doc/Certificat_5.pdf" target="_blank">Sécurité des Collectivités territoriales</a></li>
+                    <li><a href="doc/thomas_thédie_attestations.pdf" target="_blank">Recueil complet des attestations MOOC</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="documentation">
+        <h2><i class="fas fa-download"></i> Documentation Technique & Preuves</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <a href="doc/AP.pdf" target="_blank" class="card" style="text-decoration: none; color: inherit; flex: 1; text-align: center;">Projet Station F (PDF)</a>
+            <a href="doc/schema_reseau.pdf" target="_blank" class="card" style="text-decoration: none; color: inherit; flex: 1; text-align: center;">Schéma Réseau (PDF)</a>
+            <a href="doc/ticket_support.pdf" target="_blank" class="card" style="text-decoration: none; color: inherit; flex: 1; text-align: center;">Exemples de Tickets (PDF)</a>
+        </div>
+    </section>
+
+</main>
+
+<footer id="contact">
+    <h2>Me contacter</h2>
+    <div class="footer-info">
+        <a href="mailto:thomas.thedie@gmail.com"><i class="fas fa-envelope"></i> thomas.thedie@gmail.com</a>
+        <a href="https://www.linkedin.com/in/thomas-thedie" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/thomas-thd" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+    <p style="margin-top: 40px; opacity: 0.7;">&copy; 2025 Thomas Thédié - Portfolio SISR - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>

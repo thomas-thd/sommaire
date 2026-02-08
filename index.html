@@ -6,33 +6,53 @@
     <title>Portfolio Professionnel – Thomas THÉDIÉ – BTS SIO SISR</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Ajout de quelques styles rapides pour la structure si ton CSS est manquant */
-        :root { --main-blue: #1e3a8a; --light-blue: #3b82f6; --bg: #f8fafc; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; color: #334155; }
-        .navbar { position: sticky; top: 0; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; padding: 10px 0; }
-        .navbar ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 0; }
-        .navbar a { text-decoration: none; color: var(--main-blue); font-weight: 600; padding: 10px 20px; transition: 0.3s; }
-        .navbar a:hover { color: var(--light-blue); }
-        .profile-img { width: 8%; border-radius: 1%; border: 5px solid #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        header { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, var(--main-blue), var(--light-blue)); color: white; }
-        section { max-width: 1100px; margin: 40px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .card { border: 1px solid #e2e8f0; padding: 25px; border-radius: 10px; margin-bottom: 25px; transition: 0.3s; border-left: 5px solid var(--light-blue); }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .footer-info a { color: white; text-decoration: none; margin: 0 15px; font-size: 1.1rem; }
-        footer { background: var(--main-blue); color: white; text-align: center; padding: 50px 20px; margin-top: 60px; }
-    </style>
+<style>
+    /* Ajout de quelques styles rapides pour la structure si ton CSS est manquant */
+    :root { --main-blue: #1e3a8a; --light-blue: #3b82f6; --bg: #f8fafc; }
+    
+    /* Ajout de text-align center pour tout aligner au milieu */
+    body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; color: #334155; text-align: center; }
+    
+    .navbar { position: sticky; top: 0; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; padding: 10px 0; }
+    .navbar ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 0; }
+    .navbar a { text-decoration: none; color: var(--main-blue); font-weight: 600; padding: 10px 20px; transition: 0.3s; }
+    .navbar a:hover { color: var(--light-blue); }
+    
+    /* Centrage de l'image de profil avec auto-margin */
+    .profile-img { width: 8%; border-radius: 1%; border: 5px solid #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin: 0 auto; display: block; }
+    
+    header { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, var(--main-blue), var(--light-blue)); color: white; }
+    
+    /* Centrage des sections avec margin auto */
+    section { max-width: 1100px; margin: 40px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    
+    /* Alignement des cartes (le contenu reste centré par l'héritage du body) */
+    .card { border: 1px solid #e2e8f0; padding: 25px; border-radius: 10px; margin-bottom: 25px; transition: 0.3s; border-left: 5px solid var(--light-blue); }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    
+    /* Centrage des listes à puces pour qu'elles ne flottent pas à gauche */
+    .card ul { list-style-position: inside; padding: 0; }
+    
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    
+    /* Centrage des liens du footer */
+    .footer-info { display: flex; justify-content: center; flex-wrap: wrap; }
+    .footer-info a { color: white; text-decoration: none; margin: 0 15px; font-size: 1.1rem; }
+    
+    footer { background: var(--main-blue); color: white; text-align: center; padding: 50px 20px; margin-top: 60px; }
+</style>
 </head>
 <body>
 
 <nav class="navbar">
     <ul>
-        <li><a href="#experiences">Parcours</a></li>
+                <li><a href="experience.html">tache approfondie</a></li>
         <li><a href="#situations">Situations & Compétences</a></li>
         <li><a href="#certificats">Certifications</a></li>
         <li><a href="veillev1.html">Veille Technologique</a></li>
         <li><a href="#contact">Contact</a></li>
+              <li><a href="EpreuveE5_thomas_thédié.pdf">grille d'évaluations E5</a></li>
+        <li><a href="nas.html">projet Personnel</a></li>
     </ul>
 </nav>
 
@@ -45,13 +65,29 @@
 </header>
 
 <main>
+<section id="formation">
+        <h2><i class="fas fa-graduation-cap"></i> Formation Scolaire</h2>
+        
+        <div class="card" style="border-left-color: #f59e0b;">
+            <h3 style="margin-top:0;">BTS Services Informatiques aux Organisations (SIO)</h3>
+            <p><strong>Option SISR :</strong> Solutions d'infrastructure, systèmes et réseaux</p>
+            <p><i class="far fa-calendar-alt"></i> 2024 - 2026</p>
+        </div>
 
+        <div class="card" style="border-left-color: #64748b;">
+            <h3 style="margin-top:0;">Baccalauréat Professionnel Systèmes Numériques (SN)</h3>
+            <p><strong>Option RISC :</strong> Réseaux Informatiques et Systèmes Communicants</p>
+            <p><i class="fas fa-award"></i> <strong>Mention Bien</strong></p>
+            <p><i class="far fa-calendar-alt"></i> 2021 - 2024</p>
+        </div>
+    </section>
     <section id="experiences">
         <h2><i class="fas fa-history"></i> Expériences Professionnelles</h2>
         
         <div class="card">
             <h3 style="margin-top:0;">Technicien Systèmes & Réseaux – Entreprise INTM (2024 - 2025)</h3>
             <ul style="line-height: 1.8;">
+                   <img src="doc/intm.png" alt="Logo INTM" class="exp-logo">
                 <li><strong>Gestion du parc informatique :</strong> Inventaire complet et suivi rigoureux des actifs matériels.</li>
                 <li><strong>Migration Système :</strong> Pilotage du passage de Windows 10 vers Windows 11 (postes de formation et consultants).</li>
                 <li><strong>Support Utilisateurs :</strong> Installation de logiciels métiers, déploiement de pilotes et résolution d'incidents (N1/N2).</li>
@@ -64,6 +100,7 @@
         <div class="card" style="border-left-color: #10b981;">
             <h3 style="margin-top:0;">Administrateur réseau junior – Entreprise TDF (2024)</h3>
             <ul style="line-height: 1.8;">
+                   <img src="doc/tdf.png" alt="Logo INTM" class="exp-logo">
                 <li><strong>Veille Technologique :</strong> Étude approfondie sur les nouveaux équipements réseaux et l'intégration de l'IA dans l'administration.</li>
                 <li><strong>Déploiement Matériel :</strong> Installation physique et configuration logique d'équipements réseaux critiques.</li>
                 <li><strong>Automatisation :</strong> Développement de scripts Python pour l'automatisation de tâches d'administration récurrentes.</li>
@@ -123,7 +160,7 @@
             <div class="card">
                 <h4>Pôle Protection des données (RGPD)</h4>
                 <ul>
-                    <li><a href="doc/Certificat_1.pdf" target="_blank">Certificat RGPD - Niveau Expert</a></li>
+                    <li><a href="doc/Certificat_1.pdf" target="_blank">Certificat RGPD</a></li>
                     <li><a href="doc/Attestation_de_suivi 2.pdf" target="_blank">Attestation Protection des données</a></li>
                     <li><a href="doc/Certificat_4.pdf" target="_blank">Certificat DPO (Data Protection Officer)</a></li>
                 </ul>
@@ -133,7 +170,7 @@
                 <ul>
                     <li><a href="doc/Certificat_3.pdf" target="_blank">Responsabilité des acteurs du numérique</a></li>
                     <li><a href="doc/Certificat_5.pdf" target="_blank">Sécurité des Collectivités territoriales</a></li>
-                    <li><a href="doc/thomas_thédie_attestations.pdf" target="_blank">Recueil complet des attestations MOOC</a></li>
+                    <li><a href="doc/thomas thédié attestations.pdf" target="_blank">Recueil complet des attestations MOOC</a></li>
                 </ul>
             </div>
         </div>
@@ -142,9 +179,9 @@
     <section id="documentation">
         <h2><i class="fas fa-download"></i> Documentation Technique & Preuves</h2>
         <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-            <a href="doc/AP.pdf" target="_blank" class="card" style="text-decoration: none; color: inherit; flex: 1; text-align: center;">Projet Station F (PDF)</a>
+            <a href="doc/Stationf.pdf" target="_blank" class="card" style="text-decoration: none; color: inherit; flex: 1; text-align: center;">Projet Station F (PDF)</a>
             <a href="doc/schema_reseau.pdf" target="_blank" class="card" style="text-decoration: none; color: inherit; flex: 1; text-align: center;">Schéma Réseau (PDF)</a>
-            <a href="doc/ticket_support.pdf" target="_blank" class="card" style="text-decoration: none; color: inherit; flex: 1; text-align: center;">Exemples de Tickets (PDF)</a>
+            <a href="doc/glpi.png" target="_blank" class="card" style="text-decoration: none; color: inherit; flex: 1; text-align: center;">Exemples de Tickets (PDF)</a>
         </div>
     </section>
 

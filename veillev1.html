@@ -31,348 +31,192 @@
         </thead>
         <tbody>
             <tr>
+    <td>19/01/2026</td>
+    <td><b>Urssaf</b></td>
+    <td>Accès frauduleux via identifiants de compte partenaire compromis</td>
+    <td>Accès non autorisé à l’API de déclaration préalable à l’embauche</td>
+    <td><span class="data-tag">Consultation/extraction de données de la DPAE pour ~12 millions de salariés (noms, prénoms, dates de naissance, dates d’embauche, SIRET)</span></td>
+    <td><a href="https://www.lemonde.fr/pixels/article/2026/01/19/acces-frauduleux-aux-donnees-de-l-urssaf-12-millions-de-salaries-potentiellement-concernes_6663256_4408996.html">https://www.lemonde.fr/...</a></td>
+</tr>
+
+            <tr>
+    <td>09/01/2026</td>
+    <td><b>Dinum / Plateforme HubEE (DILA, DGCS, DGS, CNAF)</b></td>
+    <td>Intrusion informatique (vecteur non précisé)</td>
+    <td>Accès illégitime à la plateforme HubEE utilisée pour les démarches en ligne</td>
+    <td><span class="data-tag">70 000 dossiers et 160 000 documents exfiltrés, dont certains contiennent des données personnelles</span></td>
+    <td><a href="https://www.numerique.gouv.fr/sinformer/espace-presse/incident-hubee/">https://www.numerique.gouv.fr/...</a></td>
+</tr>
+
+<tr>
+    <td>01/01/2026</td>
+    <td><b>OFII (Office français de l'immigration et de l'intégration)</b></td>
+    <td>Fuite de données via un prestataire tiers</td>
+    <td>Exfiltration de données personnelles administratives</td>
+    <td><span class="data-tag">Données personnelles d’étrangers publiées en ligne (échantillons), revendication jusqu’à ~2 M de lignes sur forum (non confirmé)</span></td>
+    <td><a href="https://www.lemonde.fr/pixels/article/2026/01/05/l-office-francais-de-l-immigration-et-de-l-integration-victime-d-une-fuite-de-donnees_6660632_4408996.html">https://www.lemonde.fr/...</a></td>
+</tr>
+
+
+            <tr>
                 <td>22/12/2025</td>
-                <td><b>La Poste</b></td>
-                <td>Requêtes massives (Layer 7)</td>
-                <td>Saturation des serveurs web/applicatifs</td>
+                <td><b>La Poste (services en ligne, Colissimo, applis)</b></td>
+                <td>DDoS</td>
+                <td>Saturation des serveurs rendant les services numériques inaccessibles</td>
                 <td><span class="data-tag">Indisponibilité des services en ligne</span></td>
-                <td><a href="https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/cyberattaque-contre-la-poste-le-groupe-de-hacker-pro-russe-noname057-016-revendique-l-attaque_7698367.html">https://www.franceinfo.fr/...</a></td>
+                <td><a href="https://www.lapostegroupe.com/fr/actualite/incident-informatique-du-22-decembre">https://www.lapostegroupe.com/</a></td>
             </tr>
             <tr>
                 <td>17/12/2025</td>
                 <td><b>Min. Intérieur</b></td>
-                <td>Compromission de messageries (Phishing/Mots de passe en clair)</td>
+                <td>Messageries professionnelles compromises</td>
                 <td>Accès non autorisé aux systèmes d'information (TAJ/FPR)</td>
                 <td><span class="data-tag">Consultation et extraction de dizaines de fiches sensibles</span></td>
-                <td><a href="https://www.lemonde.fr/societe/article/2025/12/17/cyberattaque-contre-le-ministere-de-l-interieur-laurent-nunez-annonce-que-des-fichiers-importants-dont-le-traitement-des-antecedents-judiciaires-ont-ete-consultes-deux-enquetes-ouvertes_6658320_3224.html">https://www.lemonde.fr/...</a></td>
+                <td><a href="https://www.rtl.fr/actu/sciences-tech/des-fichiers-de-police-consultes-une-revendication-sans-preuve-des-millions-de-donnees-evoquees-ce-que-l-on-sait-du-piratage-du-ministere-de-l-interieur-7900579529?">https://www.rtl.fr/</a></td>
             </tr>
             <tr>
                 <td>18/12/2025</td>
                 <td><b>Min. Sports (Pass'Sport)</b></td>
                 <td>Vulnérabilité API (Plateforme "Compte Asso")</td>
                 <td>Exfiltration de données via l'API non sécurisée</td>
-                <td><span class="data-tag">Fuite de données personnelles (Nom, RIB, etc.) de 3,5M de foyers</span></td>
-                <td><a href="https://www.leparisien.fr/faits-divers/cyberattaque-la-fuite-de-donnees-de-la-caf-venait-du-ministere-des-sports-et-dune-plate-forme-dediee-aux-associations-19-12-2025-XIK32T3LDBEJVM725SAU5PFITE.php">https://www.leparisien.fr/...</a></td>
+                <td><span class="data-tag">Fuite de données personnelles(Email addresses,Genders,Names,Phone numbers,Physical addresses) de 6.4 million d'utilisateur</span></td>
+                <td><a href="https://haveibeenpwned.com/Breach/PassSport">https://haveibeenpwned.com/</a></td>
             </tr>
             <tr>
                 <td>01/12/2025</td>
                 <td><b>France Travail / Missions Locales</b></td>
-                <td>Credential Replay (Réutilisation d'identifiants volés)</td>
+                <td>Compte interne compromis (responsable de gestion)</td>
                 <td>Création de faux comptes et accès aux dossiers</td>
-                <td><span class="data-tag">Consultation de données personnelles (Nom, NIR, etc.) de 1,6M de jeunes</span></td>
-                <td><a href="https://www.francetravail.org/accueil/communiques/2025/le-reseau-des-missions-locales-et-france-travail-appellent-a-la-vigilance-apres-un-acte-de-cyber-malveillance.html">https://www.francetravail.org/...</a></td>
+                <td><span class="data-tag">Consultation de données personnelles (Nom, Prénom, NIR, adresses et informations des dossiers) de ~1,6 M de jeunes</span></td>
+                <td><a href="https://www.francetravail.org/files/live/sites/peorg/files/documents/Communiqu%C3%A9%20de%20presse/2025/20251201-%20CP%20-%20Le%20r%C3%A9seau%20des%20Missions%20locales%20et%20France%20Travail%20victimes%20dune%20cyberattaque.pdf?">https://www.francetravail.org/</a></td>
             </tr>
             <tr>
-                <td>14/11/2025</td>
+                <td>19/11/2025</td>
                 <td><b>Pajemploi (Urssaf)</b></td>
-                <td>Vol de données (Probablement Credential Stuffing)</td>
-                <td>Accès illégitime aux comptes employeurs/salariés</td>
+                <td>Vol de données / accès illégitime identifié</td>
+                <td>Accès illégitime aux données personnelles stockées sur le service Pajemploi — pas de détail</td>
                 <td><span class="data-tag">Fuite de données personnelles (Nom, NIR, RIB) de 1,2M de salariés</span></td>
                 <td><a href="https://www.urssaf.fr/accueil/actualites/pajemploi-vol-de-donnees.html">https://www.urssaf.fr/...</a></td>
             </tr>
             <tr>
-                <td>19/10/2025</td>
-                <td><b>CH Pontarlier</b></td>
-                <td>Infiltration via vulnérabilité (Phishing ou RDP/VPN)</td>
-                <td>Déploiement du Ransomware (Chiffrement)</td>
-                <td><span class="data-tag">Arrêt complet du SI et suspicion de vol de données de santé</span></td>
+                <td>19/10/2025 (nuit du 18 au 19)</td>
+                <td><b>Centre Hospitalier Intercommunal de Haute‑Comté, Pontarlier</b></td>
+                <td>Cyberattaque par ransomware (cryptolocker)</td>
+                <td>Chiffrement de données ; arrêt complet du système informatique</td>
+                <td><span class="data-tag">SI paralysé, retour au papier pour soins ; aucune preuve publique de fuite de données</span></td>
                 <td><a href="https://www.ticsante.com/Story?Id=7925">https://www.ticsante.com/...</a></td>
             </tr>
-            <tr>
-                <td>01/07/2025</td>
-                <td><b>Entités Françaises (APT28)</b></td>
-                <td>Exploitation de Zero-day (Ivanti CSA)</td>
-                <td>Obtention d'un accès initial persistant</td>
-                <td><span class="data-tag">Compromission et ciblage d'entités Gouv, Telco, Media</span></td>
-                <td><a href="https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-009/">https://www.cert.ssi.gouv.fr/...</a></td>
-            </tr>
-            <tr>
-                <td>13/06/2025</td>
-                <td><b>Sorbonne Université</b></td>
-                <td>Infiltration via vulnérabilité ou Phishing</td>
-                <td>Déploiement de Ransomware et Double Extorsion</td>
-                <td><span class="data-tag">Vol de données sensibles (bancaires, contrats, NIR)</span></td>
-                <td><a href="https://www.zataz.com/fuite-massive-a-sorbonne-universite-donnees-bancaires-contrats-et-numeros-de-secu-dans-la-nature/">https://www.zataz.com/...</a></td>
-            </tr>
-            <tr>
-                <td>06/2025</td>
-                <td><b>CH du Gers</b></td>
-                <td>Exploitation de vulnérabilité RDP / VPN</td>
-                <td>Accès au Système d'Information Hospitalier (SIH)</td>
-                <td><span class="data-tag">Exfiltration de 450 Go de Logs SIH et PII Patients</span></td>
-                <td><a href="https://www.anssi.gouv.fr/publications/rapports-et-etudes/panorama-de-la-cybermenace-2023-2024/">https://www.anssi.gouv.fr/...</a></td>
-            </tr>
-            <tr>
-                <td>06/2025</td>
-                <td><b>Hôpital Loire</b></td>
-                <td>Infiltration (Vecteur initial non précisé)</td>
-                <td>Double Extorsion (Chiffrement + Vol de données)</td>
-                <td><span class="data-tag">Vol de 126 000 PII (Nom, Pathologies, RIB)</span></td>
-                <td><a href="https://www.usine-digitale.fr/article/cyberattaque-l-hopital-de-loire-victime-d-une-double-extorsion.N2051234">https://www.usine-digitale.fr/...</a></td>
-            </tr>
+<tr>
+    <td>26/06/2025</td>
+    <td><b>Hôpital privé de la Loire (Saint‑Étienne)</b></td>
+    <td>Intrusion informatique (vecteur non précisé)</td>
+    <td>Accès non autorisé aux systèmes et exfiltration de données</td>
+    <td><span class="data-tag">Vol de données personnelles de plus de 126 000 patients (identité et coordonnées)</span></td>
+    <td><a href="https://www.tf1info.fr/justice-faits-divers/saint-etienne-une-clinique-victime-d-une-cyberattaque-les-donnees-de-plus-de-126-000-patients-volees-2382280.html">TF1 Info – vol de données patients</a></td>
+</tr>
+<tr>
+    <td>13/06/2025</td>
+    <td><b>Sorbonne Université</b></td>
+    <td>Incident de sécurité (vecteur non précisé publiquement)</td>
+    <td>Accès non autorisé et compromission de données internes</td>
+    <td><span class="data-tag">Compromission de données sensibles (adresses e‑mail, RIB, NIR, rémunération) d’environ 32 000 comptes</span></td>
+    <td><a href="https://www.sorbonne-universite.fr/presse/informations-sur-la-cyberattaque-dont-sorbonne-universite-fait-lobjet">Communiqué officiel – Sorbonne Université</a></td>
+</tr>
+
+
+
         </tbody>
     </table>
-    <div class="note-caf">
-        **Note sur la CAF (Cnaf) :** Bien qu'une fuite de données massive ait été revendiquée par des acteurs malveillants, la Caisse Nationale d'Allocations Familiales a formellement démenti toute intrusion directe dans ses systèmes d'information. Les données mises en circulation proviennent très probablement de la fuite du Ministère des Sports (Pass'Sport) ou d'anciennes bases de données.
-    </div>
 </div>
 
+
 <section class="tech-section">
-    <h2> mon analyse Analyse Technique </h2>
-    <p>Cette analyse distingue les faits confirmés des hypothèses techniques basées sur les TTPs (Tactiques, Techniques et Procédures) et les rapports d'experts CTI (Cyber Threat Intelligence). Elle se concentre sur le rôle opérationnel de l'administrateur SISR (Détection et Prévention).Les éléments cités correspondent à des indicateurs observables utilisés en détection et non à une description de techniques offensives.
+    <h2>Glossaire SISR Essentiel</h2>
+    <div class="glossary-grid">
+        <div class="glossary-term">DDoS</div>
+        <div class="glossary-def">Attaque visant à rendre un service indisponible en saturant ses ressources.</div>
+        
+        <div class="glossary-term">Ransomware</div>
+        <div class="glossary-def">Logiciel malveillant chiffrant les données pour extorsion.</div>
+        
+        <div class="glossary-term">Double Extorsion</div>
+        <div class="glossary-def">Variante de ransomware où les données sont également exfiltrées et la publication est menacée si la rançon n’est pas payée.</div>
+        
+        <div class="glossary-term">Credential Stuffing / Replay</div>
+        <div class="glossary-def">Réutilisation d’identifiants volés pour prendre le contrôle de comptes sur différents services.</div>
+        
+        <div class="glossary-term">PII</div>
+        <div class="glossary-def">Données personnelles identifiables : nom, prénom, adresse, date de naissance, etc.</div>
 
-    </p>
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Cible</th>
-                    <th>Outil/Malware</th>
-                    <th>Justification de l'Inférence</th>
-                    <th>Mode de Détection</th>
-                    <th>Prévention </th>
-                    <th>Risque de Récidive</th>
-                    <th>Sources</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>La Poste (DDoS)</b></td>
-                    <td><span class="status-tag fact">Fait Confirmé</span> Botnet **DDoSia** (Golang)</td>
-                    <td>**Inférence** : Revendication publique par NoName057(16) dont l'outil principal est DDoSia. **Analogie** : Signatures de requêtes HTTP/S identiques aux attaques contre les cibles OTAN.</td>
-                    <td>Alertes **SIEM** sur pic de trafic (Layer 7) + Analyse des logs serveurs montrant des requêtes répétitives sur des endpoints critiques.</td>
-                    <td>Déploiement d'un **WAF** (Web Application Firewall) avec règles de **rate limiting** et protection anti-DDoS (Cloudflare/Akamai).</td>
-                    <td><span class="risk-badge risk-very-high">Très Élevé</span></td>
-                    <td><span class="source-type">Presse / Privé</span><a class="source-link" href="https://www.picussecurity.com/resource/blog/how-noname05716-uses-ddosia-to-attack-nato-targets" target="_blank">https://www.picussecurity.com/...</a></td>
-                </tr>
-                <tr>
-                    <td><b>Min. Intérieur</b></td>
-                    <td><span class="status-tag hypothesis">Hypothèse Technique</span> Kit de Phishing **Tycoon 2FA** ou **LabHost** (AiTM)</td>
-                    <td>**Inférence** : L'accès aux messageries malgré le MFA indique un vol de jeton de session. **Analogie** : Ces kits sont les plus actifs en 2025 pour le vol de jetons.</td>
-                    <td>Détection par le **Proxy Web** de domaines de phishing nouvellement créés + Signalement d'utilisateurs via le bouton "Phishing" d'Outlook.</td>
-                    <td>Implémentation stricte du **MFA** (Multi-Factor Authentication) pour toutes les messageries et accès sensibles. Utilisation d'un **PAM** (Privileged Access Management).</td>
-                    <td><span class="risk-badge risk-very-high">Très Élevé</span></td>
-                    <td><span class="source-type">Presse / Institutionnel</span><a class="source-link" href="https://www.lemonde.fr/societe/article/2025/12/17/cyberattaque-contre-le-ministere-de-l-interieur-laurent-nunez-annonce-que-des-fichiers-importants-dont-le-traitement-des-antecedents-judiciaires-ont-ete-consultes-deux-enquetes-ouvertes_6658320_3224.html" target="_blank">https://www.lemonde.fr/...</a></td>
-                </tr>
-                <tr>
-                    <td><b>Min. Sports (Pass'Sport)</b></td>
-                    <td><span class="status-tag fact">Fait Confirmé</span> Exploitation d'une **IDOR** (Insecure Direct Object Reference) sur l'API.</td>
-                    <td>**Inférence** : Fuite de données massives sans compromission de compte individuel. **Analogie** : L'accès aux données de tous les utilisateurs via un seul jeton est typique d'une faille d'autorisation API.</td>
-                    <td>Monitoring des logs d'API pour détecter des requêtes anormalement volumineuses ou des accès à des ressources non autorisées par le jeton.</td>
-                    <td>Audit de sécurité des API (tests **SAST/DAST**). Mise en place d'une **Gateway API** pour valider les jetons d'autorisation et les scopes.</td>
-                    <td><span class="risk-badge risk-moderate">Modéré</span></td>
-                    <td><span class="source-type">Presse</span><a class="source-link" href="https://www.leparisien.fr/faits-divers/cyberattaque-la-fuite-de-donnees-de-la-caf-venait-du-ministere-des-sports-et-dune-plate-forme-dediee-aux-associations-19-12-2025-XIK32T3LDBEJVM725SAU5PFITE.php" target="_blank">https://www.leparisien.fr/...</a></td>
-                </tr>
-                <tr>
-                    <td><b>France Travail</b></td>
-                    <td><span class="status-tag hypothesis">Hypothèse Technique</span> Outil de Credential Stuffing **OpenBullet** ou **SilverBullet**</td>
-                    <td>**Inférence** : Taux d'échec de connexion anormalement élevé (>95%) avec des User-Agents obsolètes. **Analogie** : Utilisation de **COMB 2025** (3.2B+ records) pour le Credential Replay.</td>
-                    <td>Alertes **WAF** sur "Account Takeover" (ATO) + Détection par le **SIEM** de tentatives de connexion multiples depuis une seule IP ou un petit pool d'IPs.</td>
-                    <td>Déploiement d'un service de **Password Spraying Detection** et d'un système de **CAPTCHA** intelligent après échec de connexion.</td>
-                    <td><span class="risk-badge risk-very-high">Très Élevé</span></td>
-                    <td><span class="source-type">Institutionnel</span><a class="source-link" href="https://www.francetravail.org/accueil/communiques/2025/le-reseau-des-missions-locales-et-france-travail-appellent-a-la-vigilance-apres-un-acte-de-cyber-malveillance.html" target="_blank">https://www.francetravail.org/...</a></td>
-                </tr>
-                <tr>
-                    <td><b>Pajemploi (Urssaf)</b></td>
-                    <td><span class="status-tag hypothesis">Hypothèse Technique</span> Outil de Credential Stuffing **Sentry MBA** ou équivalent.</td>
-                    <td>**Inférence** : La présence de données bancaires (RIB) rend cette cible prioritaire pour les acteurs utilisant les **Naz.API** ou **COMB 2025**.</td>
-                    <td>Mise en place d'un système de détection d'anomalies comportementales (UBA) et de vérification des mots de passe contre les bases de données de fuites connues.</td>
-                    <td>Mise en place d'un système de détection d'anomalies comportementales (UBA) et de vérification des mots de passe contre les bases de données de fuites connues.</td>
-                    <td><span class="risk-badge risk-very-high">Très Élevé</span></td>
-                    <td><span class="source-type">Institutionnel</span><a class="source-link" href="https://www.urssaf.fr/accueil/actualites/pajemploi-vol-de-donnees.html" target="_blank">https://www.urssaf.fr/...</a></td>
-                </tr>
-                <tr>
-                    <td><b>CH Pontarlier</b></td>
-                    <td><span class="status-tag hypothesis">Hypothèse Technique</span> Ransomware **LockBit 3.0** (Zeon)</td>
-                    <td>**Inférence** : Utilisation de l'outil **Backstab** pour tuer les processus EDR et exfiltration via **Rclone**. **Analogie** : Signature de l'extension de fichier chiffré et note de rançon LockBit Black.</td>
-                    <td>Alertes **EDR** sur tentative de désactivation de la protection + Détection de flux **Rclone** vers des services de stockage Cloud (Mega.nz).</td>
-                    <td>**Segmentation réseau (VLAN)** pour isoler le SIH. Sauvegardes **immuables** (air-gapped) et tests réguliers de restauration.</td>
-                    <td><span class="risk-badge risk-high">Élevé</span></td>
-                    <td><span class="source-type">Presse Spécialisée</span><a class="source-link" href="https://www.ticsante.com/Story?Id=7925" target="_blank">https://www.ticsante.com/...</a></td>
-                </tr>
-                <tr>
-                    <td><b>Entités Françaises (APT28)</b></td>
-                    <td><span class="status-tag fact">Fait Confirmé</span> Malwares **HOUKEN** et **MASEPIE**</td>
-                    <td>**Inférence** : Exploitation de la vulnérabilité **Ivanti CSA** (CVE-2024-8190) documentée par l'ANSSI. **Analogie** : Les malwares HOUKEN sont spécifiques aux campagnes d'espionnage du GRU (APT28).</td>
-                    <td>Analyse **Forensics** post-incident montrant des connexions persistantes vers des IPs connues du GRU + Logs VPN Ivanti.</td>
-                    <td>Mise en place d'une politique de **Hardening** stricte. Utilisation de **Sandboxing** pour les équipements exposés. Réponse rapide aux alertes du CERT-FR.</td>
-                    <td><span class="risk-badge risk-permanent">Permanente</span></td>
-                    <td><span class="source-type">Institutionnel (CERT-FR)</span><a class="source-link" href="https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-009/" target="_blank">https://www.cert.ssi.gouv.fr/...</a></td>
-                </tr>
-                <tr>
-                    <td><b>Sorbonne Université</b></td>
-                    <td><span class="status-tag hypothesis">Hypothèse Technique</span> Ransomware **BlackCat (ALPHV)** (Rust)</td>
-                    <td>**Inférence** : Chiffreur écrit en **Rust** et note de rançon personnalisée avec lien vers un site de leak `.onion` spécifique à ALPHV. **Analogie** : Cible opportuniste (éducation) souvent visée par les affiliés ALPHV.</td>
-                    <td>Détection par l'**Antivirus** de fichiers suspects avec entropie élevée (chiffrés) + Alertes sur mouvement latéral via **PsExec**.</td>
-                    <td>Mise en place d'un **EDR** (Endpoint Detection and Response) sur tous les postes. Formation des utilisateurs au phishing.</td>
-                    <td><span class="risk-badge risk-moderate">Modéré</span></td>
-                    <td><span class="source-type">Presse Spécialisée</span><a class="source-link" href="https://www.zataz.com/fuite-massive-a-sorbonne-universite-donnees-bancaires-contrats-et-numeros-de-secu-dans-la-nature/" target="_blank">https://www.zataz.com/...</a></td>
-                </tr>
-                <tr>
-                    <td><b>CH du Gers</b></td>
-                    <td><span class="status-tag hypothesis">Hypothèse Technique</span> Ransomware **Akira**</td>
-                    <td>**Inférence** : Exfiltration de 450 Go de logs SIH. **Analogie** : Le groupe Akira est connu pour cibler les accès **RDP/VPN** non sécurisés des PME/organismes publics pour le vol de données.</td>
-                    <td>Alertes **SIEM** sur connexions RDP/VPN depuis des géolocalisations inhabituelles + Détection de commandes de compression/archivage de gros volumes de données.</td>
-                    <td>Désactivation des services inutiles (RDP exposé sur Internet). Utilisation de **VPN avec MFA obligatoire** et de certificats clients.</td>
-                    <td><span class="risk-badge risk-high">Élevé</span></td>
-                    <td><span class="source-type">Institutionnel (ANSSI)</span><a class="source-link" href="https://www.anssi.gouv.fr/publications/rapports-et-etudes/panorama-de-la-cybermenace-2023-2024/" target="_blank">https://www.anssi.gouv.fr/...</a></td>
-                </tr>
-                <tr>
-                    <td><b>Hôpital Loire</b></td>
-                    <td><span class="status-tag fact">Fait Confirmé</span> Double Extorsion (Ransomware)</td>
-                    <td>**Inférence** : Vol de 126 000 PII (Nom, Pathologies, RIB). **Analogie** : Le secteur santé est la cible principale des groupes de RaaS (Ransomware-as-a-Service) comme LockBit ou BlackCat.</td>
-                    <td>**Résilience** : Détection de la compromission par l'impossibilité d'accéder aux systèmes.</td>
-                    <td>Mise en place d'un **Plan de Continuité d'Activité (PCA)** et d'un **Plan de Reprise d'Activité (PRA)** testés. Chiffrement des données sensibles au repos.</td>
-                    <td><span class="risk-badge risk-high">Élevé</span></td>
-                    <td><span class="source-type">Presse Spécialisée</span><a class="source-link" href="https://www.usine-digitale.fr/article/cyberattaque-l-hopital-de-loire-victime-d-une-double-extorsion.N2051234" target="_blank">https://www.usine-digitale.fr/...</a></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="glossary-term">NIR</div>
+        <div class="glossary-def">Numéro d'Inscription au Répertoire (numéro de Sécurité Sociale en France).</div>
+
+        <div class="glossary-term">RIB</div>
+        <div class="glossary-def">Relevé d'Identité Bancaire, utilisé pour identifier un compte bancaire.</div>
+
+        <div class="glossary-term">SIEM</div>
+        <div class="glossary-def">Outil centralisant les logs pour détecter les incidents de sécurité et corréler les événements.</div>
+        
+        <div class="glossary-term">SOC</div>
+        <div class="glossary-def">Équipe surveillant et répondant aux incidents de cybersécurité.</div>
+        
+        <div class="glossary-term">MFA</div>
+        <div class="glossary-def">Authentification à plusieurs facteurs pour sécuriser l’accès aux comptes.</div>
+        
+        <div class="glossary-term">PCA</div>
+        <div class="glossary-def">Plan de Continuité d'Activité : maintenir le service en mode dégradé après un incident.</div>
+        
+        <div class="glossary-term">PRA</div>
+        <div class="glossary-def">Plan de Reprise d'Activité : reconstruire et restaurer le système après un sinistre.</div>
+        
+        <div class="glossary-term">Zero-day</div>
+        <div class="glossary-def">Vulnérabilité exploitée avant qu’un correctif ne soit disponible.</div>
+<div class="glossary-term">VLAN</div>
+<div class="glossary-def">Séparation logique du réseau pour isoler différentes parties et sécuriser les flux.</div>
+
+<div class="glossary-term">WAF</div>
+<div class="glossary-def">Pare-feu applicatif web : filtre le trafic web pour bloquer les attaques sur les sites et applications.</div>
+
     </div>
+</section>
 
-
-    <section class="tech-section">
-        <h2>Vocabulaire Technique et Glossaire SISR</h2>
-        <div class="glossary-grid">
-            <div class="glossary-term">APT28 (Advanced Persistent Threat)</div>
-            <div class="glossary-def">Groupe de menace avancé et persistant, souvent lié à des États, menant des campagnes d'espionnage à long terme contre des cibles stratégiques.</div>
-            
-            <div class="glossary-term">AiTM (Adversary-in-the-Middle)</div>
-            <div class="glossary-def">Technique de phishing où l'attaquant s'interpose entre l'utilisateur et le service légitime pour intercepter les jetons de session (cookies) en temps réel, contournant ainsi le MFA.</div>
-            
-            <div class="glossary-term">API Gateway</div>
-            <div class="glossary-def">Composant d'infrastructure qui agit comme un point d'entrée unique pour les APIs, permettant de gérer l'authentification, l'autorisation, le rate limiting et le monitoring.</div>
-            
-            <div class="glossary-term">C2 (Command & Control)</div>
-            <div class="glossary-def">Infrastructure (serveurs) utilisée par les attaquants pour envoyer des commandes aux systèmes compromis et recevoir les données exfiltrées.</div>
-            
-            <div class="glossary-term">Combo List</div>
-            <div class="glossary-def">Fichier texte contenant des millions de paires d'identifiants (email:password) provenant de diverses fuites de données, utilisé pour des attaques automatisées.</div>
-            
-            <div class="glossary-term">Credential Replay / Stuffing</div>
-            <div class="glossary-def">Attaque automatisée consistant à tester massivement des identifiants volés sur différents services web pour prendre le contrôle de comptes.</div>
-            
-            <div class="glossary-term">CVE (Common Vulnerabilities and Exposures)</div>
-            <div class="glossary-def">Système de référencement des vulnérabilités de sécurité informatique connue. Chaque faille a un identifiant unique (ex: CVE-2024-8190).</div>
-            
-            <div class="glossary-term">DAST (Dynamic Application Security Testing)</div>
-            <div class="glossary-def">Analyse de sécurité d'une application en cours d'exécution pour identifier les vulnérabilités exploitables (ex: injections SQL, failles d'autorisation).</div>
-            
-            <div class="glossary-term">DDoS (Distributed Denial of Service) Layer 7</div>
-            <div class="glossary-def">Attaque par déni de service distribué ciblant la couche applicative (HTTP/HTTPS), visant à saturer les ressources du serveur plutôt que la bande passante.</div>
-            
-            <div class="glossary-term">Double Extorsion</div>
-            <div class="glossary-def">Méthode de ransomware où les attaquants chiffrent les données ET exfiltrent une copie, menaçant de les publier si la rançon n'est pas payée.</div>
-            
-            <div class="glossary-term">EDR (Endpoint Detection and Response)</div>
-            <div class="glossary-def">Solution de sécurité installée sur les postes et serveurs pour surveiller les comportements suspects et répondre aux incidents en temps réel.</div>
-            
-            <div class="glossary-term">Forensics (Informatique Légale)</div>
-            <div class="glossary-def">Analyse technique après un incident pour reconstituer le mode opératoire de l'attaquant, identifier les données compromises et les points d'entrée.</div>
-            
-            <div class="glossary-term">Hardening (Durcissement)</div>
-            <div class="glossary-def">Processus de sécurisation d'un système (OS, application, réseau) en réduisant sa surface d'attaque (désactivation des services inutiles, patch management).</div>
-            
-            <div class="glossary-term">IDOR (Insecure Direct Object Reference)</div>
-            <div class="glossary-def">Fille de sécurité où une application permet d'accéder à des données d'autres utilisateurs en modifiant simplement un paramètre (ex: un ID dans une URL).</div>
-            
-            <div class="glossary-term">IoC (Indicators of Compromise)</div>
-            <div class="glossary-def">Indices techniques (IPs, hashs de fichiers, domaines) qui indiquent qu'un système a été compromis.</div>
-            
-            <div class="glossary-term">MFA (Multi-Factor Authentication)</div>
-            <div class="glossary-def">Méthode d'authentification nécessitant au moins deux preuves d'identité distinctes (ex: mot de passe + code SMS/App).</div>
-            
-            <div class="glossary-term">PAM (Privileged Access Management)</div>
-            <div class="glossary-def">Solution de gestion des accès à hauts privilèges (administrateurs) permettant de sécuriser, contrôler et auditer leurs sessions.</div>
-            
-            <div class="glossary-term">PCA / PRA</div>
-            <div class="glossary-def">Plan de Continuité d'Activité (maintenir le service en mode dégradé) et Plan de Reprise d'Activité (reconstruire le SI après un sinistre).</div>
-            
-            <div class="glossary-term">PII / NIR / RIB</div>
-            <div class="glossary-def">Données Personnelles Identifiables (PII), Numéro d'Inscription au Répertoire (NIR - Sécurité Sociale), et Relevé d'Identité Bancaire (RIB). Ces données sont hautement sensibles.</div>
-            
-            <div class="glossary-term">RaaS (Ransomware-as-a-Service)</div>
-            <div class="glossary-def">Modèle économique où des développeurs de ransomwares louent leur outil à des "affiliés" qui réalisent l'attaque en échange d'une part de la rançon.</div>
-            
-            <div class="glossary-term">Rate Limiting</div>
-            <div class="glossary-def">Technique de limitation du nombre de requêtes autorisées par utilisateur ou par IP sur une période donnée pour prévenir les abus et les attaques DDoS.</div>
-            
-            <div class="glossary-term">SAST (Static Application Security Testing)</div>
-            <div class="glossary-def">Analyse du code source d'une application sans l'exécuter pour détecter des failles de sécurité potentielles.</div>
-            
-            <div class="glossary-term">SIEM (Security Information and Event Management)</div>
-            <div class="glossary-def">Outil centralisant les logs de toute l'infrastructure pour détecter des événements de sécurité par corrélation.</div>
-            
-            <div class="glossary-term">SOC (Security Operations Center)</div>
-            <div class="glossary-def">Équipe et infrastructure dédiées à la surveillance, à la détection et à la réponse aux incidents de cybersécurité.</div>
-            
-            <div class="glossary-term">TTPs (Tactics, Techniques, and Procedures)</div>
-            <div class="glossary-def">Description du mode opératoire global d'un attaquant ou d'un groupe de menace.</div>
-            
-            <div class="glossary-term">WAF (Web Application Firewall)</div>
-            <div class="glossary-def">Pare-feu spécifique aux applications web, capable de filtrer le trafic HTTP/HTTPS pour bloquer les attaques applicatives (DDoS L7, SQLi, XSS).</div>
-            
-            <div class="glossary-term">Zero-day</div>
-            <div class="glossary-def">Vulnérabilité logicielle qui est exploitée par des attaquants avant que l'éditeur n'ait connaissance de la faille et n'ait pu publier un correctif.</div>
-        </div>
-    </section>
 <section class="tech-section analysis-section">
     <h2>Méthodologie de Veille Technologique (Barème BTS SIO)</h2>
     <p>La réalisation de cette veille s'est appuyée sur une méthodologie structurée visant à garantir la pertinence et la fiabilité des informations collectées, en se concentrant sur les incidents majeurs affectant le secteur public français, particulièrement sensibles pour un profil SISR.</p>
-    
-    <h3>Sources et Outils</h3>
-    <ul>
-        <li>**Sources Institutionnelles (Primaires)** : Consultation régulière des bulletins du **CERT-FR** et des rapports de l'**ANSSI** (Agence Nationale de la Sécurité des Systèmes d'Information). Ces sources fournissent des informations techniques validées sur les menaces et les modes opératoires (TTPs).</li>
-        <li>**Sources Spécialisées (Secondaires)** : Sites d'actualité cyber tels que **Zataz**, **LeMagIT**, **L'Usine Digitale** et **Ticsanté** (pour le secteur de la santé).</li>
-        <li>**Outils d'Agrégation** : Utilisation d'agrégateurs de flux **RSS** et d'alertes **Google** pour automatiser la détection de mots-clés (ex: "cyberattaque France 2025", "ransomware hôpital").</li>
-        <li>**Réseaux Sociaux Professionnels** : Suivi d'experts et d'entreprises de cybersécurité sur **LinkedIn** pour obtenir des analyses rapides et des retours d'expérience.</li>
-    </ul>
+<h3>Sources et Outils</h3>
+<ul>
+    <li><b>Flux RSS / Agrégateurs</b> : Feedly, pour suivre automatiquement les publications cyber.</li>
+    <li><b>Alertes Google</b> : Sur mots-clés ciblés (ex: "cyberattaque France 2025").</li>
+    <li><b>Réseaux sociaux</b> : LinkedIn et Twitter pour suivre experts et entreprises de cybersécurité.</li>
+</ul>
+
+
+<section class="tech-section">
+    <h2>Références et Sources</h2>
+    <p>Les informations présentées dans ce rapport sont basées uniquement sur des sources fiables et vérifiées :</p>
+
+    <div class="source-box">
+        <span class="source-type">CERT-FR</span>
+        <b>Bulletins et rapports sur les incidents et vulnérabilités en France</b><br>
+        <a href="https://www.cert.ssi.gouv.fr/" target="_blank">https://www.cert.ssi.gouv.fr/</a>
+    </div>
+
+    <div class="source-box">
+        <span class="source-type">ANSSI</span>
+        <b>Rapports de sécurité et recommandations pour les organisations françaises</b><br>
+        <a href="https://www.ssi.gouv.fr/" target="_blank">https://www.ssi.gouv.fr/</a>
+    </div>
+
+    <div class="source-box">
+        <span class="source-type">CNIL</span>
+        <b>Alertes et recommandations sur la protection des données personnelles</b><br>
+        <a href="https://www.cnil.fr/" target="_blank">https://www.cnil.fr/</a>
+    </div>
 </section>
-    <section class="tech-section">
-        <h2>Références et Sources Documentaires</h2>
-        <p>Les analyses techniques (inférences, outils, TTPs) présentées dans ce rapport sont basées sur la corrélation d'informations provenant des sources d'expertise suivantes :</p>
-        
-        <div class="source-box">
-            <span class="source-type">Source Institutionnelle (CERT-FR)</span>
-            <b>Rapport CTI : Ciblage d'entités françaises par le mode opératoire APT28</b><br>
-            Lien complet : <a href="https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-007/" target="_blank">https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-007/</a>
-        </div>
 
-        <div class="source-box">
-            <span class="source-type">Source Institutionnelle (CERT-FR)</span>
-            <b>Bulletin d'actualité : Campagne DDoS contre les services publics</b><br>
-            Lien complet : <a href="https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-004.pdf" target="_blank">https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-004.pdf</a>
-        </div>
-
-        <div class="source-box">
-            <span class="source-type">Média de Presse Reconnu (Le Monde)</span>
-            <b>Analyse de la cyberattaque contre le Ministère de l'Intérieur</b><br>
-            Lien complet : <a href="https://www.lemonde.fr/societe/article/2025/12/17/cyberattaque-contre-le-ministere-de-l-interieur-laurent-nunez-annonce-que-des-fichiers-importants-dont-le-traitement-des-antecedents-judiciaires-ont-ete-consultes-deux-enquetes-ouvertes_6658320_3224.html" target="_blank">https://www.lemonde.fr/societe/article/2025/12/17/cyberattaque-contre-le-ministere-de-l-interieur-laurent-nunez-annonce-que-des-fichiers-importants-dont-le-traitement-des-antecedents-judiciaires-ont-ete-consultes-deux-enquetes-ouvertes_6658320_3224.html</a>
-        </div>
-
-        <div class="source-box">
-            <span class="source-type">Rapport d'Éditeur Privé (Picus Security)</span>
-            <b>Analyse technique du botnet DDoSia et du groupe NoName057(16)</b><br>
-            Lien complet : <a href="https://www.picussecurity.com/resource/blog/how-noname05716-uses-ddosia-to-attack-nato-targets" target="_blank">https://www.picussecurity.com/resource/blog/how-noname05716-uses-ddosia-to-attack-nato-targets</a>
-        </div>
-        
-        <div class="source-box">
-            <span class="source-type">Rapport d'Éditeur Privé (CrowdStrike)</span>
-            <b>European Threat Landscape Report 2025 (Focus sur les kits de phishing et les ransomwares)</b><br>
-            Lien complet : <a href="https://www.crowdstrike.com/en-us/blog/2025-european-threat-landscape-report-key-highlights/" target="_blank">https://www.crowdstrike.com/en-us/blog/2025-european-threat-landscape-report-key-highlights/</a>
-        </div>
-        
-        <div class="source-box">
-            <span class="source-type">Source Institutionnel (ENISA)</span>
-            <b>Threat Landscape Report 2025 (Panorama des menaces en Europe)</b><br>
-            Lien complet : <a href="https://www.enisa.europa.eu/sites/default/files/2025-10/ENISA%20Threat%20Landscape%202025_0.pdf" target="_blank">https://www.enisa.europa.eu/sites/default/files/2025-10/ENISA%20Threat%20Landscape%202025_0.pdf</a>
-        </div>
-    </section>
-
-    <section class="conclusion-box">
-        <h2>Conclusion Opérationnelle : Positionnement SISR</h2>
-        <p>Face à l'intensification des menaces en 2025, le rôle de l'administrateur SISR évolue d'une gestion purement infrastructurelle vers une posture de <b>défense active</b>. La priorité absolue doit être mise sur le <b>durcissement (Hardening)</b> des équipements de bordure et la mise en œuvre d'une <b>authentification forte résistante au phishing (FIDO2)</b>. La capacité à segmenter le réseau (VLAN/Micro-segmentation) et à monitorer les flux applicatifs (WAF/SIEM) devient le rempart principal contre la propagation des ransomwares et l'exfiltration de données sensibles au sein des organisations.</p>
-    </section>
+<section class="conclusion-box">
+    <h2>Conclusion</h2>
+    <p>Avec l'augmentation des attaques en 2025, l'administrateur SISR doit passer à une <b>protection active</b>. Il doit : sécuriser les équipements, mettre en place une <b>authentification forte (MFA)</b>, séparer le réseau en parties (VLAN), et surveiller le trafic</p>
 
 </body>
 </html>

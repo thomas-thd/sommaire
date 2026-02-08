@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio BTS SIO SISR</title>
+    <style>
+        :root { --main-blue: #1e3a8a; --light-blue: #3b82f6; --bg: #f8fafc; }
+
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; color: #334155; text-align: center; }
+
+        .navbar { position: sticky; top: 0; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; padding: 10px 0; }
+        .navbar ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 0; }
+        .navbar a { text-decoration: none; color: var(--main-blue); font-weight: 600; padding: 10px 20px; transition: 0.3s; }
+        .navbar a:hover { color: var(--light-blue); }
+
+        .profile-img { width: 8%; border-radius: 1%; border: 5px solid #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin: 0 auto; display: block; }
+
+        header { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, var(--main-blue), var(--light-blue)); color: white; }
+
+        section { max-width: 1100px; margin: 40px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
+
+        .card { border: 1px solid #e2e8f0; padding: 25px; border-radius: 10px; margin-bottom: 25px; transition: 0.3s; border-left: 5px solid var(--light-blue); text-align: center; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        .card ul, .card ol { list-style-position: inside; padding: 0; text-align: center; display: inline-block; text-align: left; margin: 0 auto; }
+        .card ol li, .card ul li { margin-bottom: 10px; text-align: left; }
+
+        .footer-info { display: flex; justify-content: center; flex-wrap: wrap; }
+        .footer-info a { color: white; text-decoration: none; margin: 0 15px; font-size: 1.1rem; }
+
+        footer { background: var(--main-blue); color: white; text-align: center; padding: 50px 20px; margin-top: 60px; }
+
+        h1, h2, p { text-align: center; }
+
+        .back-link { display: inline-block; margin: 20px 0; padding: 10px 25px; background: var(--main-blue); color: white; border-radius: 8px; text-decoration: none; transition: 0.3s; }
+        .back-link:hover { background: var(--light-blue); }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Portfolio BTS SIO SISR - Thomas Thédié</h1>
+    <a href="index.html" class="back-link">Retour au portfolio</a>
+</header>
+
+<section class="card">
+<h1>Installation et paramétrage du NAS Synology DS420</h1>
+
+<h2>Contexte</h2>
+<p>Installation d’un NAS Synology DS420 pour centraliser les fichiers et sécuriser les accès dans l’entreprise. <br>Objectif : créer un environnement réseau sécurisé et contrôlé pour les utilisateurs.</p>
+
+<h2>Étapes de réalisation</h2>
+<ol>
+    <li><span class="highlight">Gestion des utilisateurs :</span> choix des utilisateurs et création de groupes pour centraliser les logs.</li>
+    <li><span class="highlight">Création de dossiers :</span> mise en place de dossiers spécifiques avec segmentation la plus restrictive possible.</li>
+    <li><span class="highlight">Sécurisation du NAS :</span> modification de tous les paramètres par défaut pour réduire les risques (bots, vulnérabilités).</li>
+    <li><span class="highlight">Tests internes :</span> vérification du fonctionnement sur le réseau interne.</li>
+    <li><span class="highlight">Installation du serveur VPN :</span> configuration avec une plage IP locale différente du réseau principal.</li>
+    <li><span class="highlight">Sécurité renforcée :</span> mise en place de règles strictes et de la double authentification.</li>
+    <li><span class="highlight">Installation OpenVPN sur postes clients :</span> ajout de la configuration client pour accès sécurisé.</li>
+    <li><span class="highlight">Script DNS interne :</span> ajout d’un script pour inscrire le NAS dans le fichier hosts des clients afin de le retrouver par nom quel que soit le réseau.</li>
+    <li><span class="highlight">Authentification :</span> contrôle que chaque utilisateur accède uniquement aux dossiers autorisés.</li>
+</ol>
+</section>
+
+<section class="card">
+<h1>Rénovation de l'infrastructure réseau – IC (Inter-Contrat)</h1>
+
+<h2>Contexte</h2>
+<p>Mission réalisée pour moderniser le réseau inter-contrat de l'entreprise. <br> Objectif : sécuriser le réseau, remplacer les postes clients et garantir la continuité du service.</p>
+
+<h2>Étapes de la réalisation</h2>
+<ol>
+    <li><span class="highlight">Inventaire de l'actif :</span> recensement du matériel réseau, des postes clients et des logiciels installés.</li>
+    <li><span class="highlight">Planification :</span> organisation des changements pour éviter toute interruption. Les interventions ont été planifiées à <span class="highlight">midi</span>, période où les utilisateurs n'étaient pas actifs.</li>
+    <li><span class="highlight">Paramétrage et tests :</span> configuration des nouveaux postes et vérification de leur bon fonctionnement sur le réseau.</li>
+    <li><span class="highlight">Déploiement :</span> remplacement des postes par vagues de 5 pour limiter l'impact sur le service.</li>
+    <li><span class="highlight">Retour utilisateur :</span> suivi des retours et résolution des éventuels problèmes post-installation.</li>
+</ol>
+</section>
+
+<section class="card">
+<h1>Migration des postes Windows 10 vers Windows 11</h1>
+
+<h2>Contexte</h2>
+<p>Migration de postes utilisateurs vers Windows 11, réalisée à distance via TeamViewer. <br>Objectif : mettre à jour les systèmes tout en garantissant la continuité du service et la sécurité des données.</p>
+
+<h2>Compétences mobilisées</h2>
+<ul>
+    <li>Supervision active de la migration à distance</li>
+    <li>Vérification de la compatibilité des systèmes et des logiciels</li>
+    <li>Contrôle qualité et validation de la mise à niveau</li>
+    <li>Détection et gestion des incidents éventuels</li>
+    <li>Support utilisateur et maintien de la continuité du service</li>
+</ul>
+
+<h2>Étapes de réalisation</h2>
+<ol>
+    <li><span class="highlight">Préparation :</span> vérification de la compatibilité matérielle et logicielle de chaque poste.</li>
+    <li><span class="highlight">Lancement de la mise à niveau :</span> démarrage de la migration Windows 10 → 11 via TeamViewer.</li>
+    <li><span class="highlight">Suivi de la migration :</span> contrôle de l’avancement, vérification des caractéristiques système et surveillance des messages d’erreur.</li>
+    <li><span class="highlight">Vérification post-migration :</span> confirmation que la mise à niveau a réussi et que tous les fichiers et paramètres utilisateur ont été préservés.</li>
+    <li><span class="highlight">Gestion des incidents :</span> identification et résolution rapide de tout problème détecté pendant ou après la migration.</li>
+</ol>
+</section>
+
+<a href="index.html" class="back-link">Retour au portfolio</a>
+
+</body>
+</html>

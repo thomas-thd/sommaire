@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Personnel - Thomas Thédié</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --accent: #f59e0b;
+            --bg: #f8fafc;
+            --text: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 6px solid var(--accent);
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .doc-item {
+            display: flex;
+            align-items: center;
+            background: #f1f5f9;
+            padding: 12px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .doc-item:hover {
+            background: #e2e8f0;
+            transform: translateX(5px);
+        }
+
+        /* --- CONFIGURATION DES IMAGES NON TRONQUÉES --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Colonnes plus larges */
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            background: #f8fafc;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .gallery-item img {
+            width: 100%;       /* Prend toute la largeur de la colonne */
+            height: auto;      /* Hauteur automatique pour ne pas déformer */
+            display: block;
+            border-radius: 4px;
+            /* object-fit: contain;  Assure que l'image entière est visible */
+        }
+
+        .gallery-item span {
+            display: block;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: #475569;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .badge {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <section class="project-card">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2><i class="fas fa-server"></i> Projet : Infrastructure NAS & VPN</h2>
+            <span class="badge">Terminé - 31/01/2026</span>
+        </div>
+
+        <p>Configuration d'un serveur de stockage réseau sécurisé avec accès distant chiffré.</p>
+
+        <div class="grid">
+            <div>
+                <h4 style="border-bottom: 2px solid #f1f5f9; padding-bottom: 10px;">Livrables Techniques</h4>
+                <a href="nas/vpn_nas.pdf" class="doc-item" target="_blank">
+                    <i class="fas fa-file-pdf"></i> procédure vpn
+                </a>
+            </div>
+
+            <div>
+                <h4 style="border-bottom: 2px solid #f1f5f9; padding-bottom: 10px;">Compétences Validées</h4>
+                <ul style="padding-left: 20px; font-size: 0.95rem;">
+                    <li><strong>Droit de partage :</strong> Permissions et ACL.</li>
+                    <li><strong>Pare-feu :</strong> Sécurisation des flux.</li>
+                    <li><strong>VPN :</strong> Tunnel d'accès distant.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h4 style="margin-top: 30px;">Preuves de Configuration (Images entières)</h4>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="nas/config_vpn.png" alt="VPN">
+                <span>Configuration VPN client</span>
+            </div>
+            <div class="gallery-item">
+                <img src="nas/nas_dns.png" alt="DNS">
+                <span> script pour ajouter le nas dans le fichier host dns du client </span>
+            </div>
+            <div class="gallery-item">
+                <img src="nas/nas_dossier.png" alt="Dossier">
+                <span>configuration VPN serveur </span>
+            </div>
+            <div class="gallery-item">
+                <img src="nas/parefeux.png" alt="Pare-feu">
+                <span>Règles de Firewall</span>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

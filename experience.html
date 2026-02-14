@@ -2,109 +2,177 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio BTS SIO SISR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets Techniques-Thomas Thédié</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --main-blue: #1e3a8a; --light-blue: #3b82f6; --bg: #f8fafc; }
+        :root { 
+            --main-blue: #1e3a8a; 
+            --light-blue: #3b82f6; 
+            --accent: #06b6d4;
+            --bg: #f1f5f9; 
+            --text: #1e293b;
+        }
 
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; color: #334155; text-align: center; }
+        body { 
+            font-family: 'Inter', 'Segoe UI', sans-serif; 
+            background: var(--bg); 
+            margin: 0; 
+            color: var(--text); 
+            line-height: 1.6;
+        }
 
-        .navbar { position: sticky; top: 0; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; padding: 10px 0; }
-        .navbar ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 0; }
-        .navbar a { text-decoration: none; color: var(--main-blue); font-weight: 600; padding: 10px 20px; transition: 0.3s; }
-        .navbar a:hover { color: var(--light-blue); }
+        header { 
+            text-align: center; 
+            padding: 80px 20px; 
+            background: linear-gradient(135deg, var(--main-blue), var(--light-blue)); 
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
 
-        .profile-img { width: 8%; border-radius: 1%; border: 5px solid #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin: 0 auto; display: block; }
+        .container { max-width: 1000px; margin: -50px auto 50px; padding: 20px; }
 
-        header { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, var(--main-blue), var(--light-blue)); color: white; }
+        .project-card { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            margin-bottom: 50px;
+            border-top: 8px solid var(--light-blue);
+        }
 
-        section { max-width: 1100px; margin: 40px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
+        h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        h2 { color: var(--main-blue); border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-top: 30px; display: flex; align-items: center; gap: 10px; }
+        
+        .badge-container { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; justify-content: center; }
+        .badge { background: #dbeafe; color: var(--main-blue); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; border: 1px solid var(--light-blue); }
 
-        .card { border: 1px solid #e2e8f0; padding: 25px; border-radius: 10px; margin-bottom: 25px; transition: 0.3s; border-left: 5px solid var(--light-blue); text-align: center; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .step-list { list-style: none; padding: 0; }
+        .step-item { 
+            display: flex; 
+            align-items: flex-start; 
+            margin-bottom: 15px; 
+            background: #f8fafc; 
+            padding: 15px; 
+            border-radius: 10px; 
+            transition: 0.3s;
+        }
+        .step-item:hover { background: #f1f5f9; transform: translateX(10px); }
+        .step-icon { 
+            background: var(--main-blue); 
+            color: white; 
+            width: 35px; 
+            height: 35px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 50%; 
+            margin-right: 15px; 
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
 
-        .card ul, .card ol { list-style-position: inside; padding: 0; text-align: center; display: inline-block; text-align: left; margin: 0 auto; }
-        .card ol li, .card ul li { margin-bottom: 10px; text-align: left; }
+        .back-link { 
+            display: inline-block; 
+            margin: 20px 0; 
+            padding: 12px 30px; 
+            background: white; 
+            color: var(--main-blue); 
+            border-radius: 30px; 
+            text-decoration: none; 
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .back-link:hover { transform: scale(1.05); background: var(--bg); }
 
-        .footer-info { display: flex; justify-content: center; flex-wrap: wrap; }
-        .footer-info a { color: white; text-decoration: none; margin: 0 15px; font-size: 1.1rem; }
+        footer { background: var(--main-blue); color: white; text-align: center; padding: 40px; margin-top: 50px; }
 
-        footer { background: var(--main-blue); color: white; text-align: center; padding: 50px 20px; margin-top: 60px; }
+        .highlight { font-weight: bold; color: var(--light-blue); }
 
-        h1, h2, p { text-align: center; }
-
-        .back-link { display: inline-block; margin: 20px 0; padding: 10px 25px; background: var(--main-blue); color: white; border-radius: 8px; text-decoration: none; transition: 0.3s; }
-        .back-link:hover { background: var(--light-blue); }
+        /* Style spécifique pour les icônes de section */
+        .section-icon { color: var(--accent); }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Portfolio BTS SIO SISR - Thomas Thédié</h1>
-    <a href="index.html" class="back-link">Retour au portfolio</a>
+    <i class="fas fa-network-wired fa-3x" style="margin-bottom: 20px;"></i>
+    <h1>Tâches approfondies</h1>
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
 </header>
 
-<section class="card">
-<h1>Installation et paramétrage du NAS Synology DS420</h1>
+<div class="container">
 
-<h2>Contexte</h2>
-<p>Installation d’un NAS Synology DS420 pour centraliser les fichiers et sécuriser les accès dans l’entreprise. <br>Objectif : créer un environnement réseau sécurisé et contrôlé pour les utilisateurs.</p>
+    <section class="project-card">
+        <h1><i class="fas fa-server"></i> NAS Synology DS420</h1>
+        <div class="badge-container">
+            <span class="badge">VPN / OpenVPN</span>
+            <span class="badge">Sécurité Réseau</span>
 
-<h2>Étapes de réalisation</h2>
-<ol>
-    <li><span class="highlight">Gestion des utilisateurs :</span> choix des utilisateurs et création de groupes pour centraliser les logs.</li>
-    <li><span class="highlight">Création de dossiers :</span> mise en place de dossiers spécifiques avec segmentation la plus restrictive possible.</li>
-    <li><span class="highlight">Sécurisation du NAS :</span> modification de tous les paramètres par défaut pour réduire les risques (bots, vulnérabilités).</li>
-    <li><span class="highlight">Tests internes :</span> vérification du fonctionnement sur le réseau interne.</li>
-    <li><span class="highlight">Installation du serveur VPN :</span> configuration avec une plage IP locale différente du réseau principal.</li>
-    <li><span class="highlight">Sécurité renforcée :</span> mise en place de règles strictes et de la double authentification.</li>
-    <li><span class="highlight">Installation OpenVPN sur postes clients :</span> ajout de la configuration client pour accès sécurisé.</li>
-    <li><span class="highlight">Script DNS interne :</span> ajout d’un script pour inscrire le NAS dans le fichier hosts des clients afin de le retrouver par nom quel que soit le réseau.</li>
-    <li><span class="highlight">Authentification :</span> contrôle que chaque utilisateur accède uniquement aux dossiers autorisés.</li>
-</ol>
-</section>
+            <span class="badge">DNS Scripting</span>
+        </div>
+        
+        <h2><i class="fas fa-info-circle section-icon"></i> Contexte</h2>
+        <p>Centralisation des fichiers et sécurisation des accès critiques de l'entreprise via une solution de stockage réseau (NAS) robuste.</p>
 
-<section class="card">
-<h1>Rénovation de l'infrastructure réseau – IC (Inter-Contrat)</h1>
+        <h2><i class="fas fa-list-check section-icon"></i> Étapes Clés</h2>
+        <div class="step-list">
+            <div class="step-item"><div class="step-icon">1</div><div><strong>Gestion des accès :</strong> Création de groupes d'utilisateurs et gestion fine des permissions.</div></div>
+            <div class="step-item"><div class="step-icon">2</div><div><strong>Segmentation :</strong> Création de dossiers partagés avec politique de "moindre privilège".</div></div>
+            <div class="step-item"><div class="step-icon">3</div><div><strong>Configuration de sécurité :</strong> Désactivation des comptes par défaut et changement des ports standards.</div></div>
+            <div class="step-item"><div class="step-icon">4</div><div><strong>Accès Distant :</strong> Déploiement d'un serveur <strong>OpenVPN</strong> avec double authentification (MFA).</div></div>
+            <div class="step-item"><div class="step-icon">5</div><div><strong>Automatisation :</strong> Script DNS pour la résolution de nom d'hôte automatique.</div></div>
+        </div>
+    </section>
 
-<h2>Contexte</h2>
-<p>Mission réalisée pour moderniser le réseau inter-contrat de l'entreprise. <br> Objectif : sécuriser le réseau, remplacer les postes clients et garantir la continuité du service.</p>
+    <section class="project-card">
+        <h1><i class="fas fa-project-diagram"></i> Rénovation Infrastructure IC</h1>
+        <div class="badge-container">
+            <span class="badge">Audit</span>
+            <span class="badge">Déploiement</span>
+            <span class="badge">Gestion de Parc</span>
+        </div>
 
-<h2>Étapes de la réalisation</h2>
-<ol>
-    <li><span class="highlight">Inventaire de l'actif :</span> recensement du matériel réseau, des postes clients et des logiciels installés.</li>
-    <li><span class="highlight">Planification :</span> organisation des changements pour éviter toute interruption. Les interventions ont été planifiées à <span class="highlight">midi</span>, période où les utilisateurs n'étaient pas actifs.</li>
-    <li><span class="highlight">Paramétrage et tests :</span> configuration des nouveaux postes et vérification de leur bon fonctionnement sur le réseau.</li>
-    <li><span class="highlight">Déploiement :</span> remplacement des postes par vagues de 5 pour limiter l'impact sur le service.</li>
-    <li><span class="highlight">Retour utilisateur :</span> suivi des retours et résolution des éventuels problèmes post-installation.</li>
-</ol>
-</section>
+        <h2><i class="fas fa-info-circle section-icon"></i> Contexte</h2>
+        <p>Modernisation complète du parc informatique inter-contrat pour garantir performance et sécurité logicielle.</p>
 
-<section class="card">
-<h1>Migration des postes Windows 10 vers Windows 11</h1>
+        <h2><i class="fas fa-tools section-icon"></i> Réalisation</h2>
+        <div class="step-list">
+            <div class="step-item"><div class="step-icon"><i class="fas fa-clipboard-list"></i></div><div><strong>Inventaire :</strong> Audit complet des actifs matériels et licences logicielles.</div></div>
+            <div class="step-item"><div class="step-icon"><i class="fas fa-clock"></i></div><div><strong>Planification :</strong> Intervention en milieu de journée (zéro impact utilisateur).</div></div>
+            <div class="step-item"><div class="step-icon"><i class="fas fa-pc-display"></i></div><div><strong>Déploiement :</strong> Remplacement progressif des postes par vagues de 5 unités.</div></div>
+            <div class="step-item"><div class="step-icon"><i class="fas fa-headset"></i></div><div><strong>Support :</strong> Accompagnement des utilisateurs après la mise en service.</div></div>
+        </div>
+    </section>
 
-<h2>Contexte</h2>
-<p>Migration de postes utilisateurs vers Windows 11, réalisée à distance via TeamViewer. <br>Objectif : mettre à jour les systèmes tout en garantissant la continuité du service et la sécurité des données.</p>
+    <section class="project-card">
+        <h1><i class="fab fa-windows"></i> Migration Windows 11</h1>
+        <div class="badge-container">
+            <span class="badge">TeamViewer</span>
+            <span class="badge">Remote Admin</span>
+            <span class="badge">OS Migration</span>
+        </div>
 
-<h2>Compétences mobilisées</h2>
-<ul>
-    <li>Supervision active de la migration à distance</li>
-    <li>Vérification de la compatibilité des systèmes et des logiciels</li>
-    <li>Contrôle qualité et validation de la mise à niveau</li>
-    <li>Détection et gestion des incidents éventuels</li>
-    <li>Support utilisateur et maintien de la continuité du service</li>
-</ul>
+        <h2><i class="fas fa-microchip section-icon"></i> Compétences mobilisées</h2>
+        <p>Migration de masse effectuée entièrement à distance, assurant la continuité d'activité des collaborateurs.</p>
+        
+        <div class="step-list">
+            <div class="step-item"><div class="step-icon"><i class="fas fa-check-double"></i></div><div>Vérification de la compatibilité (TPM 2.0, Secure Boot).</div></div>
+            <div class="step-item"><div class="step-icon"><i class="fas fa-satellite-dish"></i></div><div>Prise en main à distance via <strong>TeamViewer</strong>.</div></div>
+            <div class="step-item"><div class="step-icon"><i class="fas fa-shield-alt"></i></div><div>Sauvegarde et vérification de l'intégrité des données post-migration.</div></div>
+        </div>
+    </section>
 
-<h2>Étapes de réalisation</h2>
-<ol>
-    <li><span class="highlight">Préparation :</span> vérification de la compatibilité matérielle et logicielle de chaque poste.</li>
-    <li><span class="highlight">Lancement de la mise à niveau :</span> démarrage de la migration Windows 10 → 11 via TeamViewer.</li>
-    <li><span class="highlight">Suivi de la migration :</span> contrôle de l’avancement, vérification des caractéristiques système et surveillance des messages d’erreur.</li>
-    <li><span class="highlight">Vérification post-migration :</span> confirmation que la mise à niveau a réussi et que tous les fichiers et paramètres utilisateur ont été préservés.</li>
-    <li><span class="highlight">Gestion des incidents :</span> identification et résolution rapide de tout problème détecté pendant ou après la migration.</li>
-</ol>
-</section>
+    <div style="text-align: center;">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+    </div>
 
-<a href="index.html" class="back-link">Retour au portfolio</a>
+</div>
+
+<footer>
+    <p>&copy; 2026- Thomas Thédié | BTS SIO SISR</p>
+</footer>
 
 </body>
 </html>

@@ -120,7 +120,7 @@
         <div class="step-list">
             <div class="step-item"><div class="step-icon">1</div><div><strong>Gestion des accès :</strong> Création de groupes d'utilisateurs et gestion fine des permissions.</div></div>
             <div class="step-item"><div class="step-icon">2</div><div><strong>Segmentation :</strong> Création de dossiers partagés avec politique de "moindre privilège".</div></div>
-            <div class="step-item"><div class="step-icon">3</div><div><strong>Configuration de sécurité :</strong> Désactivation des comptes par défaut et changement des ports standards.</div></div>
+            <div class="step-item"><div class="step-icon">3</div><div><strong>Hardening :</strong> Désactivation des comptes par défaut et changement des ports standards.</div></div>
             <div class="step-item"><div class="step-icon">4</div><div><strong>Accès Distant :</strong> Déploiement d'un serveur <strong>OpenVPN</strong> avec double authentification (MFA).</div></div>
             <div class="step-item"><div class="step-icon">5</div><div><strong>Automatisation :</strong> Script DNS pour la résolution de nom d'hôte automatique.</div></div>
         </div>
@@ -145,24 +145,56 @@
             <div class="step-item"><div class="step-icon"><i class="fas fa-headset"></i></div><div><strong>Support :</strong> Accompagnement des utilisateurs après la mise en service.</div></div>
         </div>
     </section>
+<section class="project-card">
+    <h1><i class="fas fa-building"></i> Projet Station F – AP</h1>
+    <div class="badge-container">
+        <span class="badge">Proxmox VE</span>
+        <span class="badge">Stack Core</span>
+        <span class="badge">Haute Disponibilité</span>
+        <span class="badge">File Server</span>
+        <span class="badge">EtherChannel</span>
+    </div>
 
-    <section class="project-card">
-        <h1><i class="fab fa-windows"></i> Migration Windows 11</h1>
-        <div class="badge-container">
-            <span class="badge">TeamViewer</span>
-            <span class="badge">Remote Admin</span>
-            <span class="badge">OS Migration</span>
-        </div>
+    <h2><i class="fas fa-info-circle section-icon"></i> Contexte</h2>
+    <p>Mise en place d’une infrastructure  simulé de Station F dans le cadre d’un Atelier Professionnel (AP)</p>
 
-        <h2><i class="fas fa-microchip section-icon"></i> Compétences mobilisées</h2>
-        <p>Migration de masse effectuée entièrement à distance, assurant la continuité d'activité des collaborateurs.</p>
+    <h2><i class="fas fa-tools section-icon"></i> Réalisation</h2>
+    <div class="step-list">
         
-        <div class="step-list">
-            <div class="step-item"><div class="step-icon"><i class="fas fa-check-double"></i></div><div>Vérification de la compatibilité (TPM 2.0, Secure Boot).</div></div>
-            <div class="step-item"><div class="step-icon"><i class="fas fa-satellite-dish"></i></div><div>Prise en main à distance via <strong>TeamViewer</strong>.</div></div>
-            <div class="step-item"><div class="step-icon"><i class="fas fa-shield-alt"></i></div><div>Sauvegarde et vérification de l'intégrité des données post-migration.</div></div>
+        <div class="step-item">
+            <div class="step-icon">1</div>
+            <div>
+<strong>Proxmox VE :</strong> Déploiement des machines virtuelles nécessaires aux services internes, création des comptes administrateurs et gestion des rôles et permissions.
+
+            </div>
         </div>
-    </section>
+
+        <div class="step-item">
+            <div class="step-icon">2</div>
+            <div>
+                <strong>Stack Switch Core :</strong> Mise en place d’un empilement de switches cœur afin d’assurer une Haute Disponibilité matérielle.
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-icon">3</div>
+            <div>
+<strong>EtherChannel :</strong> Configuration d’une agrégation de liens via LACP (802.3ad) afin d’assurer la redondance et l’augmentation de la bande passante entre les switches.
+
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-icon">4</div>
+            <div>
+                <strong>File Server :</strong> Déploiement d’un serveur de fichiers virtualisé avec gestion des partages réseau et des permissions utilisateurs.
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
 
     <div style="text-align: center;">
         <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
